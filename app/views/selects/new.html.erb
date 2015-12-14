@@ -6,6 +6,20 @@
 	<%= f.select(:group_size, @group.map { |value| [ value, value ] }) %><br>
 
     <%= f.label :interest %>
-    <%= f.select(:interest, @select_interest.map { |value| [value, value] }) %>
+    <%= f.select(:interest, @select_interest.map { |value| [value, value] }) %><br>
+
+    <%= f.label :location %>
+    <%= f.text_field :location %><br>
+
+     <%= f.label :time %>
+	 <%= f.datetime_select :time, start_year: 2015, discard_minute: true, discard_month: true, discard_year: true, discard_day: true, ampm: true %><br>
+
+	 <%= f.label :cost %>
+	 <%= f.number_field :cost%><br>
+
+	 <%= f.submit %>
+	
+
+
 
 <% end %>
