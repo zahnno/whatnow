@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-root'select#new'
+root'selects#new'
 
 resources :selects, only: [:new, :create]
 resources :events, only: [:show]

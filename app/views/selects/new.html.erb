@@ -1,1 +1,11 @@
 <h1>WELCOME TO WHUTNOW!</h1>
+
+<%= form_for @select do |f| %>
+
+	<%= f.label :group_size %>
+	<%= f.select(:group_size, @group.map { |value| [ value, value ] }) %><br>
+
+    <%= f.label :interest %>
+    <%= f.select(:interest, @select_interest.map { |value| [value, value] }) %>
+
+<% end %>
