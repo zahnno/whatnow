@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  group_size: MyString
+  interest: MyString
+  location: MyString
+  time: 2015-12-14 14:18:34
+  cost: 1
+
+two:
+  group_size: MyString
+  interest: MyString
+  location: MyString
+  time: 2015-12-14 14:18:34
+  cost: 1
