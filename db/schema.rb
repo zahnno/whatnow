@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151215031322) do
+ActiveRecord::Schema.define(version: 20151215211124) do
 
   create_table "events", force: :cascade do |t|
     t.datetime "eventtime"
@@ -22,8 +22,10 @@ ActiveRecord::Schema.define(version: 20151215031322) do
     t.string   "phone"
     t.integer  "cost"
     t.string   "link"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
+    t.decimal  "latitude",   precision: 8, scale: 6
+    t.decimal  "longitude",  precision: 9, scale: 6
   end
 
   create_table "selects", force: :cascade do |t|

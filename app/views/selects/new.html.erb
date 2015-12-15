@@ -1,3 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="http://code.jquery.com/jquery-2.0.0.js"></script>
+</head>
+<body>
+	
+
+
+
+
 <h1>WELCOME TO WHUTNOW!</h1>
 
 <%= form_for @select do |f| %>
@@ -18,6 +31,7 @@
     <%= f.label :location %>
     	<%= f.text_field :location %><br>
 
+<<<<<<< HEAD
      <%= f.label :sessiontime %>
 	 	<%= f.datetime_select :sessiontime, start_year: 2015, discard_minute: true, discard_month: true, discard_year: true, discard_day: true, ampm: true %><br>
 
@@ -36,8 +50,17 @@
 
 
 	<%= f.submit %>
+=======
+     <%= f.label :time %>
+	 <%= f.datetime_select :sessiontime, start_year: 2015, discard_minute: true, discard_month: true, discard_year: true, discard_day: true, ampm: true %><br>
+
+	 <%= f.label :cost %>
+	 <%= f.select(:cost, @cost.map{ |value| [value, value] }) %><br>
+>>>>>>> eadc47a7222b1e6edd48424d3da8d086ff97a03e
 	
-
-
+	 <%= f.submit id: "find" %>
 
 <% end %>
+
+</body>
+</html>
