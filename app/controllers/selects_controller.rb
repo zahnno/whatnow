@@ -4,6 +4,7 @@ def new
 	@select = Select.new
 	@group = ["Solo", "Couple", "Group"]
 	@select_interest = ["Theatre", "Film", "Art", "Dining", "Volunteer", "Adventure", "Sports"]
+	@cost = ["Free", "$", "$$", "$$$"]
 end
 
 def create
