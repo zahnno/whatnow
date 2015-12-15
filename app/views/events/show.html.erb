@@ -1,1 +1,13 @@
 <h2>Welcome to WhutNow!</h2>
+
+<% @events.each do |event| %>
+
+ <%= event.name %><br>
+ <%= event.address %><br>
+ <%= event.phone %><br>
+ <%= event.category %><br>
+ <%= event.size %><br>
+ <%= event.cost %><br>
+ <p><%= event.link %></p><br>
+
+ <% end %>
