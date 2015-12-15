@@ -3,7 +3,7 @@ class SelectsController < ApplicationController
 def new
 	@select = Select.new
 	@group = ["Solo", "Couple", "Group"]
-	@select_interest = ["Theatre", "Film", "Art", "Dining", "Volunteer", "Adventure"]
+	@select_interest = ["Theatre", "Film", "Art", "Dining", "Volunteer", "Adventure", "Sports"]
 end
 
 def create
@@ -17,7 +17,7 @@ end
 private
 
 	def select_params
- 		params.require(:select).permit(:group_size, :interest, :location, :time, :cost)
+ 		params.require(:select).permit(:group_size, :interest, :location, :sessiontime, :cost)
 	end
 
 end
