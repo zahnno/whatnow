@@ -1,3 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="http://code.jquery.com/jquery-2.0.0.js"></script>
+</head>
+<body>
+	
+
+
+
+
 <h1>WELCOME TO WHUTNOW!</h1>
 
 <%= form_for @select do |f| %>
@@ -16,10 +29,11 @@
 
 	 <%= f.label :cost %>
 	 <%= f.number_field :cost%><br>
-
-	 <%= f.submit %>
 	
-
-
+	
+	 <%= f.submit id: "find" %>
 
 <% end %>
+
+</body>
+</html>
