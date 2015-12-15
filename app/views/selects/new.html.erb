@@ -31,11 +31,8 @@
     <%= f.label :location %>
     	<%= f.text_field :location %><br>
 
-<<<<<<< HEAD
      <%= f.label :sessiontime %>
 	 	<%= f.datetime_select :sessiontime, start_year: 2015, discard_minute: true, discard_month: true, discard_year: true, discard_day: true, ampm: true %><br>
-
-
 
 	 <%= f.label :cost %>:&nbsp;
 		<%= label_tag(:cost, "free") %>
@@ -47,16 +44,14 @@
 		<%= label_tag(:cost, "$$$") %>
 			<%= radio_button_tag(:cost, "$$$") %><br>
 
-
-
 	<%= f.submit %>
-=======
+
      <%= f.label :time %>
 	 <%= f.datetime_select :sessiontime, start_year: 2015, discard_minute: true, discard_month: true, discard_year: true, discard_day: true, ampm: true %><br>
 
 	 <%= f.label :cost %>
 	 <%= f.select(:cost, @cost.map{ |value| [value, value] }) %><br>
->>>>>>> eadc47a7222b1e6edd48424d3da8d086ff97a03e
+
 	
 	 <%= f.submit id: "find" %>
 
