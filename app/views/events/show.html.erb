@@ -1,5 +1,12 @@
 <h2>Welcome to WhutNow!</h2>
 
+<h2>Select Object</h2>
+ <%= @select.group_size %>
+ <%= @select.interest %>
+ <%= @select.location %>
+ <%= @select.cost %>
+
+ <h2>Events</h2>
 <% @events.each do |event| %>
 
  <%= event.name %><br>
@@ -11,3 +18,5 @@
  <p><%= event.link %></p><br>
 
  <% end %>
+
+
