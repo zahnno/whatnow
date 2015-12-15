@@ -1,7 +1,10 @@
 class EventsController < ApplicationController
 before_filter :load_select
+
+  
+
 	def show 
-		@events = Event.all
+		@events = Event.category("Film")
 	end
 
 private
