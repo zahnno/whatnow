@@ -86,13 +86,13 @@
 
 	 <%= f.label :cost %>:&nbsp;
 		<%= label_tag(:cost, "free") %>
-			<%= radio_button_tag(:cost, "free") %>
+			<%= f.radio_button(:cost, "free") %>
 		<%= label_tag(:cost, "$") %>
-			<%= radio_button_tag(:cost, "$") %>
+			<%= f.radio_button(:cost, "$") %>
 		<%= label_tag(:cost, "$$") %>
-			<%= radio_button_tag(:cost, "$$") %>
+			<%= f.radio_button(:cost, "$$") %>
 		<%= label_tag(:cost, "$$$") %>
-			<%= radio_button_tag(:cost, "$$$") %><br>
+			<%= f.radio_button(:cost, "$$$") %><br>
 	
 	 <%= f.submit id: "find" %>
 
