@@ -6,10 +6,23 @@
 	<script src="http://code.jquery.com/jquery-2.0.0.js"></script>
 
 	<script>
+
+        function welcome() {
+		  $('.intro').fadeIn(1500).fadeOut(1500, function() {
+	        $('.btn-group').trigger('welcomefinished');
+	      })
+        }
+
 		$(document).ready(function(){
-		
-			$('.intro').fadeIn(1500);
-			$('.intro').fadeOut(1500);
+		   welcome();
+
+           $('.btn-group').on('welcomefinished', function(){
+           	 $(this).fadeIn(1500);
+           })
+
+           
+
+			
          
 		   $('.btn-primary').mouseenter(function(){
             
@@ -38,6 +51,7 @@
 	      	$(this).css({
 	      		'background-color': 'white'
 	       	});
+	       	$('btn-group').fadeOut(1500);
 	      
 		  });
 
@@ -56,7 +70,7 @@
 
 <%= form_for @select do |f| %>
 
-	<div class = "btn-group" data-toggle = "buttons-radio">
+	<div class = "btn-group" data-toggle = "buttons-radio" style="display:none;">
 	<%#= f.label :group_size %><!-- :&nbsp;	 -->
 	       
 			<%#= radio_button_tag(:group_size, "Solo", :id=>"first", :style=>"display: none;") %>
