@@ -10,7 +10,7 @@ end
 def create
 	@select = Select.new(select_params)
 	if @select.save
-	redirect_to select_path(@select)
+	redirect_to event_path(@select)
 end
 end
 

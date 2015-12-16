@@ -13,3 +13,38 @@
  *= require_tree .
  *= require_self
  */
+ body {
+ 	margin: 0;
+ 	padding: 0;
+ }
+
+.intro{
+	margin-top: 0px;
+	height: 400px;
+	padding-top: 200px;
+	text-align: center;
+	font-size: 100px;
+	font-family: arial;
+	color: white;
+}
+.logo {
+	width:100px;
+	height: 100px;
+}
+
+.top-banner {
+	width: 100%;
+	height: 100px;
+	background-color: black;
+	padding-left: 20px;
+	padding-top: 5px;
+}
+
+.main-body {
+	height: 900px;
+	background-color: #333333;
+}
+
+.coolbeans {
+	display: none;
+}

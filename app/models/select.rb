@@ -5,8 +5,7 @@ class Select < ActiveRecord::Base
 
 	after_validation :geocode
 
-	def retrieve
-		
-		Event.near(location).first
+	def retrieve		
+		Event.near(location)
 	end
 end
