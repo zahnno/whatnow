@@ -10,7 +10,39 @@
 		
 			$('.intro').fadeIn(1500);
 			$('.intro').fadeOut(1500);
+         
+		   $('.btn-primary').mouseenter(function(){
+		   	$(this).css({
+		   		'background-color': 'white'
+		   	})
+		    .mouseleave(function() {
+    			$(this).css({
+		   			'background-color': '#333333'
+		   		})
+  			});
+		});
 
+           // $('.btn-primary').hover(
+           // 	function(){
+           // 		$(this).css({
+           // 			'background-color' : 'white'
+           // 		})
+           // 	})
+
+
+
+	      $('.btn-primary').on('click', function(){
+            
+            $('.btn-primary').css({
+            	'background-color': '#333333'
+            })
+
+
+
+	      	$(this).css({
+	      		'background-color': 'white'
+	      	});
+		  });
 		});
 	</script>
 
@@ -25,16 +57,20 @@
 
 <%= form_for @select do |f| %>
 
-	
-	<%= f.label :group_size %>:&nbsp;	
-		<%= label_tag(:group_size, "Solo") %>
-			<%= radio_button_tag(:group_size, "Solo") %>
-		<%= label_tag(:group_size, "Double") %>
-				<%= radio_button_tag(:group_size, "Double") %>
-		<%= label_tag(:group_size, "Group") %>
-			<%= radio_button_tag(:group_size, "Group") %>
-		<br>
+	<div class = "btn-group" data-toggle = "buttons-radio">
+	<%#= f.label :group_size %><!-- :&nbsp;	 -->
+	       
+			<%#= radio_button_tag(:group_size, "Solo", :id=>"first", :style=>"display: none;") %>
+			<label for="first" class="btn btn-primary"><%= f.radio_button(:group_size, "Solo", :id=>"first", :style=>"display: none;") %>SOLO</label>
+ 			
+ 			<label for="second" class="btn btn-primary">
+ 				<%= f.radio_button(:group_size, "Double", :id=>"second", :style=>"display: none;") %>COUPLE</label>
+			
+			<label for="third" class="btn btn-primary">
+			<%= f.radio_button(:group_size, "Group", :id=>"third", :style=>"display: none;") %>GROUP</label>
 
+		<br>
+ 	</div>
 
     <%= f.label :interest %>
     	<%= f.select(:interest, @select_interest.map { |value| [value, value] }) %><br>
