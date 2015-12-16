@@ -25,20 +25,35 @@
 
 <%= form_for @select do |f| %>
 
-	<%= f.label :group_size %>
-	<%= f.select(:group_size, @group.map { |value| [ value, value ] })%><br>
+	
+	<%= f.label :group_size %>:&nbsp;	
+		<%= label_tag(:group_size, "Solo") %>
+			<%= radio_button_tag(:group_size, "Solo") %>
+		<%= label_tag(:group_size, "Double") %>
+				<%= radio_button_tag(:group_size, "Double") %>
+		<%= label_tag(:group_size, "Group") %>
+			<%= radio_button_tag(:group_size, "Group") %>
+		<br>
+
 
     <%= f.label :interest %>
-    <%= f.select(:interest, @select_interest.map { |value| [value, value] }) %><br>
+    	<%= f.select(:interest, @select_interest.map { |value| [value, value] }) %><br>
 
     <%= f.label :location %>
-    <%= f.text_field :location %><br>
+    	<%= f.text_field :location %><br>
 
-     <%= f.label :time %>
-	 <%= f.datetime_select :sessiontime, start_year: 2015, discard_minute: true, discard_month: true, discard_year: true, discard_day: true, ampm: true %><br>
+     <%= f.label :sessiontime %>
+	 	<%= f.datetime_select :sessiontime, start_year: 2015, discard_minute: true, discard_month: true, discard_year: true, discard_day: true, ampm: true %><br>
 
-	 <%= f.label :cost %>
-	 <%= f.select(:cost, @cost.map{ |value| [value, value] }) %><br>
+	 <%= f.label :cost %>:&nbsp;
+		<%= label_tag(:cost, "free") %>
+			<%= radio_button_tag(:cost, "free") %>
+		<%= label_tag(:cost, "$") %>
+			<%= radio_button_tag(:cost, "$") %>
+		<%= label_tag(:cost, "$$") %>
+			<%= radio_button_tag(:cost, "$$") %>
+		<%= label_tag(:cost, "$$$") %>
+			<%= radio_button_tag(:cost, "$$$") %><br>
 	
 	 <%= f.submit id: "find" %>
 
