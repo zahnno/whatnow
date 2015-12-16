@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-before_filter :load_select
+before_filter :load_event
 
   
 
@@ -17,8 +17,8 @@ before_filter :load_select
 
 private
 
-	def load_select
-		@select = Select.find(params[:id])
+	def load_event
+		@event = Event.find(params[:id])
 	end
 
 end

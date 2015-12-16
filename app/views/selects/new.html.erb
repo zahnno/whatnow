@@ -28,11 +28,11 @@
 	
 	<%= f.label :group_size %>:&nbsp;	
 		<%= label_tag(:group_size, "Solo") %>
-			<%= radio_button_tag(:group_size, "Solo") %>
+			<%= f.radio_button(:group_size, "Solo") %>
 		<%= label_tag(:group_size, "Double") %>
-				<%= radio_button_tag(:group_size, "Double") %>
+		    <%= f.radio_button(:group_size, "Double") %>
 		<%= label_tag(:group_size, "Group") %>
-			<%= radio_button_tag(:group_size, "Group") %>
+			<%= f.radio_button(:group_size, "Group") %>
 		<br>
 
 
@@ -47,13 +47,13 @@
 
 	 <%= f.label :cost %>:&nbsp;
 		<%= label_tag(:cost, "free") %>
-			<%= radio_button_tag(:cost, "free") %>
+			<%= f.radio_button(:cost, "free") %>
 		<%= label_tag(:cost, "$") %>
-			<%= radio_button_tag(:cost, "$") %>
+			<%= f.radio_button(:cost, "$") %>
 		<%= label_tag(:cost, "$$") %>
-			<%= radio_button_tag(:cost, "$$") %>
+			<%= f.radio_button(:cost, "$$") %>
 		<%= label_tag(:cost, "$$$") %>
-			<%= radio_button_tag(:cost, "$$$") %><br>
+			<%= f.radio_button(:cost, "$$$") %><br>
 	
 	 <%= f.submit id: "find" %>
 
