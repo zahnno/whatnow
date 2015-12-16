@@ -43,13 +43,6 @@
 			<%= radio_button_tag(:cost, "$$") %>
 		<%= label_tag(:cost, "$$$") %>
 			<%= radio_button_tag(:cost, "$$$") %><br>
-
-     <%= f.label :time %>
-	 <%= f.datetime_select :sessiontime, start_year: 2015, discard_minute: true, discard_month: true, discard_year: true, discard_day: true, ampm: true %><br>
-
-	 <%= f.label :cost %>
-	 <%= f.select(:cost, @cost.map{ |value| [value, value] }) %><br>
-
 	
 	 <%= f.submit id: "find" %>
 
