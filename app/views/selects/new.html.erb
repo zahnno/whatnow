@@ -12,38 +12,41 @@
 			$('.intro').fadeOut(1500);
          
 		   $('.btn-primary').mouseenter(function(){
+
 		   	$(this).css({
-		   		'background-color': 'white'
+		   		'background-color': 'grey',
 		   	})
+
 		    .mouseleave(function() {
+
+
+            if ($(this).find("input[type='radio']:checked").val() === undefined)
     			$(this).css({
 		   			'background-color': '#333333'
-		   		})
+		   		});
   			});
-		});
+			});
 
-           // $('.btn-primary').hover(
-           // 	function(){
-           // 		$(this).css({
-           // 			'background-color' : 'white'
-           // 		})
-           // 	})
-
-
+		   //$('#first').on('click', function() {
+   			//	console.log($(this).val());
+   			//	console.log($(this)); 
+			//});
 
 	      $('.btn-primary').on('click', function(){
-            
+
             $('.btn-primary').css({
             	'background-color': '#333333'
             })
-
-
-
+        
+        
 	      	$(this).css({
 	      		'background-color': 'white'
-	      	});
+	       	});
+	      
 		  });
+
 		});
+
 	</script>
 
 </head>
