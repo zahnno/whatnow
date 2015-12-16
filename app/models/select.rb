@@ -5,7 +5,8 @@ class Select < ActiveRecord::Base
 
 	def retrieve
 		
-		Event.near(location).first
+		Event.near(location).category(interest).grpsize(group_size).sample
+
 	end
 
 end

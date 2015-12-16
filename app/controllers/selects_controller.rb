@@ -10,13 +10,15 @@ end
 def create
 	@select = Select.new(select_params)
 	if @select.save
-	redirect_to select_path(@select)
-end
+		redirect_to select_path(@select)
+	end
 end
 
 def show
 	@select = Select.find(params[:id])
 	@the_one = @select.retrieve 
+
+
 end
 
 
