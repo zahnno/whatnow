@@ -12,7 +12,8 @@
 			$('.intro').fadeOut(1500);
          
 		   $('.btn-primary').mouseenter(function(){
-
+            
+            if ($(this).find("input[type='radio']:checked").val() === undefined) 
 		   	$(this).css({
 		   		'background-color': 'grey',
 		   	})
@@ -26,11 +27,6 @@
 		   		});
   			});
 			});
-
-		   //$('#first').on('click', function() {
-   			//	console.log($(this).val());
-   			//	console.log($(this)); 
-			//});
 
 	      $('.btn-primary').on('click', function(){
 
