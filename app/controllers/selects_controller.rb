@@ -26,7 +26,7 @@ end
 private
 
 	def select_params
- 		params.require(:select).permit(:group_size, :interest, :location, :sessiontime, :cost)
+ 		params.require(:select).permit(:group_size, :interest, :location, :cost)
 	end
 
 end

@@ -6,6 +6,18 @@
 	<script src="http://code.jquery.com/jquery-2.0.0.js"></script>
 
 	<script>
+		// function check()
+  //           {
+  //               var searchtext = document.getElementById("select_location").value;
+  //               if(searchtext=='')
+  //               {
+  //                   $('location-div').append('location-error')
+  //                   return false;
+  //               }
+  //               else {
+
+  //               }
+  //           }
 
 		//TRANSITION OF DIVISION CREATING TRIGGER
         function welcome() {
@@ -30,9 +42,15 @@
 
 
 		$(document).ready(function(){
-		   welcome();
+		   	welcome();
 
-
+		   //PREVENTING FORM SUBMISSION WHEN ENTER PRESSED
+		   $(window).keydown(function(event){
+    			if(event.keyCode == 13) {
+      				event.preventDefault();
+      			return false;
+   				}
+  			});
 
 		   //TRANSITION OF DIVISION CALLED BY TRIGGER
            $('.btn-group').on('welcomefinished', function(){
@@ -172,10 +190,6 @@
     	<%= f.text_field :location, :autocomplete=>"off", :placeholder=>"Enter your location..." %><br>
 	</div>
 	
-	<div class="time-div">
-     <%= f.label :sessiontime %>
-	 	<%= f.datetime_select :sessiontime, start_year: 2015, discard_minute: true, discard_month: true, discard_year: true, discard_day: true, ampm: true %><br>
-	</div>
 
 	<div class="cost-div">
 	 <%= f.label :cost %>:&nbsp;
