@@ -6,18 +6,19 @@
 	<script src="http://code.jquery.com/jquery-2.0.0.js"></script>
 
 	<script>
-		// function check()
-  //           {
-  //               var searchtext = document.getElementById("select_location").value;
-  //               if(searchtext=='')
-  //               {
-  //                   $('location-div').append('location-error')
-  //                   return false;
-  //               }
-  //               else {
 
-  //               }
-  //           }
+		function check()
+            {
+                var searchtext = document.getElementById("select_location").value;
+                if(searchtext=='')
+                {
+                        $('.location-error').fadeIn(1500, function() {
+                    	$('.location-error').fadeOut(1500);
+                    });
+                               
+                    return false;
+                }
+            }
 
 		//TRANSITION OF DIVISION CREATING TRIGGER
         function welcome() {
@@ -48,6 +49,7 @@
 		   $(window).keydown(function(event){
     			if(event.keyCode == 13) {
       				event.preventDefault();
+      				check();
       			return false;
    				}
   			});
@@ -188,8 +190,8 @@
 
 	<div class="location-div">
     	<%= f.text_field :location, :autocomplete=>"off", :placeholder=>"Enter your location..." %><br>
-	</div>
-	
+    	<p class='location-error'>Please enter location</p>
+	</div>	
 
 	<div class="cost-div">
 	 <%= f.label :cost %>:&nbsp;

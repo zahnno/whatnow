@@ -51,7 +51,9 @@ input {
 input:focus {
 	outline: none;
 }
-
+.location-error{
+	display: none;
+}
 .location-div {
 	display: none;
 	text-align: center;
