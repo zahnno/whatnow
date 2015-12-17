@@ -71,9 +71,8 @@
 <%= form_for @select do |f| %>
 
 	<div class = "btn-group" data-toggle = "buttons-radio" style="display:none;">
-	<%#= f.label :group_size %><!-- :&nbsp;	 -->
-	       
-			<%#= radio_button_tag(:group_size, "Solo", :id=>"first", :style=>"display: none;") %>
+			
+			<p style = "text-align:center; padding-bottom: 20px;"> Choose your size ...</p>
 			<label for="first" class="btn btn-primary"><%= f.radio_button(:group_size, "Solo", :id=>"first", :style=>"display: none;") %>SOLO</label>
  			
  			<label for="second" class="btn btn-primary">
@@ -84,16 +83,35 @@
 
 		<br>
  	</div>
+    
+    <div class= "interest-div">
+    <%= f.label :interest %>:&nbsp;
+		
+		<label for="sports" class="interest-btn">
+			<%= f.radio_button(:interest, "Sports", :id=>"sports", :style=>"display: none;") %>SPORTS</label>
 
-    <%= f.label :interest %>
-    	<%= f.select(:interest, @select_interest.map { |value| [value, value] }) %><br>
+		<label for="art" class="interest-btn">
+			<%= f.radio_button(:interest, "Art", :id=>"art", :style=>"display: none;") %>SPORTS</label>
 
+			<label for="film" class="interest-btn">
+			<%= f.radio_button(:interest, "Film", :id=>"film", :style=>"display: none;") %>SPORTS</label>
+
+			<label for="food" class="interest-btn">
+			<%= f.radio_button(:interest, "Food", :id=>"food", :style=>"display: none;") %>SPORTS</label>
+
+	</div>
+
+	<div class="location-div">
     <%= f.label :location %>
     	<%= f.text_field :location %><br>
-
+	</div>
+	
+	<div class="time-div">
      <%= f.label :sessiontime %>
 	 	<%= f.datetime_select :sessiontime, start_year: 2015, discard_minute: true, discard_month: true, discard_year: true, discard_day: true, ampm: true %><br>
+	</div>
 
+	<div class="cost-div">
 	 <%= f.label :cost %>:&nbsp;
 		<%= label_tag(:cost, "free") %>
 			<%= f.radio_button(:cost, "free") %>
@@ -103,8 +121,10 @@
 			<%= f.radio_button(:cost, "$$") %>
 		<%= label_tag(:cost, "$$$") %>
 			<%= f.radio_button(:cost, "$$$") %><br>
-	
+	</div>
+	<div class= "submit-div">
 	 <%= f.submit id: "find" %>
+ 	</div>
 
 <% end %>
 
