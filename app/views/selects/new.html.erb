@@ -13,6 +13,12 @@
 	      })
         }
 
+        function interest() {
+        	$('.btn-group').fadeOut(1500, function() {
+        		$('.interest-div').trigger('sizefinished');
+        	})
+        }
+
 		$(document).ready(function(){
 		   welcome();
 
@@ -20,7 +26,10 @@
            	 $(this).fadeIn(1500);
            })
 
-           
+           $('.interest-div').on('sizefinished', function(){
+           	console.log("worked")
+           	$(this).fadeIn(1500);
+           })
 
 			
          
@@ -51,9 +60,12 @@
 	      	$(this).css({
 	      		'background-color': 'white'
 	       	});
-	       	$('btn-group').fadeOut(1500);
+
+	       	interest();
 	      
 		  });
+
+
 
 		});
 
@@ -72,11 +84,11 @@
 
 	<div class = "btn-group" data-toggle = "buttons-radio" style="display:none;">
 			
-			<p style = "text-align:center; padding-bottom: 20px;"> Choose your size ...</p>
+			<p class="choose-size" style = "text-align:center; padding-bottom: 100px;"> Choose your size ...</p>
 			<label for="first" class="btn btn-primary"><%= f.radio_button(:group_size, "Solo", :id=>"first", :style=>"display: none;") %>SOLO</label>
  			
  			<label for="second" class="btn btn-primary">
- 				<%= f.radio_button(:group_size, "Double", :id=>"second", :style=>"display: none;") %>COUPLE</label>
+ 				<%= f.radio_button(:group_size, "Double", :id=>"second", :style=>"display: none;") %>DUO</label>
 			
 			<label for="third" class="btn btn-primary">
 			<%= f.radio_button(:group_size, "Group", :id=>"third", :style=>"display: none;") %>GROUP</label>
@@ -91,13 +103,13 @@
 			<%= f.radio_button(:interest, "Sports", :id=>"sports", :style=>"display: none;") %>SPORTS</label>
 
 		<label for="art" class="interest-btn">
-			<%= f.radio_button(:interest, "Art", :id=>"art", :style=>"display: none;") %>SPORTS</label>
+			<%= f.radio_button(:interest, "Art", :id=>"art", :style=>"display: none;") %>ART</label>
 
 			<label for="film" class="interest-btn">
-			<%= f.radio_button(:interest, "Film", :id=>"film", :style=>"display: none;") %>SPORTS</label>
+			<%= f.radio_button(:interest, "Film", :id=>"film", :style=>"display: none;") %>FILM</label>
 
 			<label for="food" class="interest-btn">
-			<%= f.radio_button(:interest, "Food", :id=>"food", :style=>"display: none;") %>SPORTS</label>
+			<%= f.radio_button(:interest, "Food", :id=>"food", :style=>"display: none;") %>FOOD</label>
 
 	</div>
 
