@@ -26,6 +26,8 @@
         	});
         };
 
+       
+
 
 		$(document).ready(function(){
 		   welcome();
@@ -45,6 +47,7 @@
            	$(this).fadeIn(1500);
            });
 
+         
 			
 
 
@@ -118,10 +121,6 @@
 	      
 		  });
 
-
-
-
-
 		});
 
 	</script>
@@ -170,8 +169,7 @@
 	</div>
 
 	<div class="location-div">
-    <%= f.label :location %>
-    	<%= f.text_field :location %><br>
+    	<%= f.text_field :location, :autocomplete=>"off", :placeholder=>"Enter your location..." %><br>
 	</div>
 	
 	<div class="time-div">

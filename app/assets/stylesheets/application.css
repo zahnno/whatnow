@@ -34,11 +34,29 @@
 	padding-top: 125px;
 	display: none;
  }
+input { 
+	border: 1px solid #262626;
+    padding: 15px;
+    background: #262626;
+    margin: 0 0 10px 0;
+    color: white;
+    font-size: 25px;
+    padding: 20px;
+    width: 45%;
+    letter-spacing: 3px;
+    font-weight: bold;
+    text-decoration: none;
+}
 
- .location-div {
- 	display: none;
- 	text-align: center;
- }
+input:focus {
+	outline: none;
+}
+
+.location-div {
+	display: none;
+	text-align: center;
+	padding-top: 200px;
+}
 
 .time-div {
 	display: none;
@@ -108,4 +126,20 @@
 
 .coolbeans {
 	display: none;
+}
+
+::-webkit-input-placeholder {
+   color: #4d4d4d;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #4d4d4d;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #4d4d4d;  
+}
+
+:-ms-input-placeholder {  
+   color: #4d4d4d;  
 }
