@@ -7,32 +7,49 @@
 
 	<script>
 
+		//TRANSITION OF DIVISION CREATING TRIGGER
         function welcome() {
 		  $('.intro').fadeIn(1500).fadeOut(1500, function() {
 	        $('.btn-group').trigger('welcomefinished');
-	      })
-        }
+	      });
+        };
 
         function interest() {
         	$('.btn-group').fadeOut(1500, function() {
         		$('.interest-div').trigger('sizefinished');
-        	})
-        }
+        	});
+        };
+
+        function thelocation() {
+        	$('.interest-div').fadeOut(1500, function() {
+        		$('.location-div').trigger('interestfinished');
+        	});
+        };
+
 
 		$(document).ready(function(){
 		   welcome();
 
+
+
+		   //TRANSITION OF DIVISION CALLED BY TRIGGER
            $('.btn-group').on('welcomefinished', function(){
            	 $(this).fadeIn(1500);
-           })
+           });
 
            $('.interest-div').on('sizefinished', function(){
-           	console.log("worked")
            	$(this).fadeIn(1500);
-           })
+           });
+
+           $('.location-div').on('interestfinished', function(){
+           	$(this).fadeIn(1500);
+           });
 
 			
-         
+
+
+
+         	//GROUP SIZE HOVER EFFECT
 		   $('.btn-primary').mouseenter(function(){
             
             if ($(this).find("input[type='radio']:checked").val() === undefined) 
@@ -50,6 +67,7 @@
   			});
 			});
 
+		   //GROUP SIZE CLICK EFFECT
 	      $('.btn-primary').on('click', function(){
 
             $('.btn-primary').css({
@@ -64,6 +82,43 @@
 	       	interest();
 	      
 		  });
+
+
+	      	//INTEREST SELECT HOVER EFFECT
+		    $('.interest-btn').mouseenter(function(){
+            
+            if ($(this).find("input[type='radio']:checked").val() === undefined) 
+		   	$(this).css({
+		   		'background-color': 'grey',
+		   	})
+
+		    .mouseleave(function() {
+
+
+            if ($(this).find("input[type='radio']:checked").val() === undefined)
+    			$(this).css({
+		   			'background-color': '#333333'
+		   		});
+  			});
+			});
+
+		   //INTEREST SELECT CLICK EFFECT
+	      $('.interest-btn').on('click', function(){
+
+            $('.interest-btns').css({
+            	'background-color': '#333333'
+            })
+        
+        
+	      	$(this).css({
+	      		'background-color': 'white'
+	       	});
+
+	       	thelocation();
+	      
+		  });
+
+
 
 
 
@@ -97,7 +152,8 @@
  	</div>
     
     <div class= "interest-div">
-    <%= f.label :interest %>:&nbsp;
+ 		
+ 		<p class="choose-size" style = "text-align:center; padding-bottom: 100px;"> Choose an Interest...</p>
 		
 		<label for="sports" class="interest-btn">
 			<%= f.radio_button(:interest, "Sports", :id=>"sports", :style=>"display: none;") %>SPORTS</label>
