@@ -13,10 +13,22 @@
  *= require_tree .
  *= require_self
  */
+
  .choose-size{
  	font-size: 35px;
  	font-style: italic;
  }
+
+ .cost-btn {
+	font-family: arial;
+	color: black;
+	font-size: 30px;
+	border: 1px solid black;
+	border-radius: 3px;
+	padding: 20px 40px;
+	margin-left: 40px;
+ }
+ 
 .interest-btn{
 	font-family: arial;
 	color: black;
@@ -66,6 +78,10 @@ input:focus {
 
 .cost-div {
 	display: none;
+	width: 100%;
+	height: 200px;
+	text-align: center;
+	padding-top: 100px;
 }
 
 .submit-div {

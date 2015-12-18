@@ -16,6 +16,9 @@
                                
                     return false;
                 }
+                else if (searchtext.length != 0){
+                	thecost();
+                }
             }
 
 		//TRANSITION OF DIVISION CREATING TRIGGER
@@ -31,13 +34,17 @@
         	});
         };
 
-        function thelocation() {
+        function thecost() {
         	$('.interest-div').fadeOut(1500, function() {
-        		$('.location-div').trigger('interestfinished');
+        		$('.cost-div').trigger('interestfinished');
         	});
         };
 
-       
+       function thelocation() {
+       		$('.cost-div').fadeOut(1500, function() {
+        		$('.location-div').trigger('costfinished');
+        	});
+       }
 
 
 		$(document).ready(function(){
@@ -61,7 +68,11 @@
            	$(this).fadeIn(1500);
            });
 
-           $('.location-div').on('interestfinished', function(){
+           $('.cost-div').on('interestfinished', function(){
+           	$(this).fadeIn(1500);
+           });
+
+           $('.location-div').on('costfinished', function(){
            	$(this).fadeIn(1500);
            });
 
@@ -133,6 +144,38 @@
 	      		'background-color': 'white'
 	       	});
 
+	       	thecost();
+	      
+		  });
+
+		  //COST SELECT HOVER EFFECT
+		    $('.cost-btn').mouseenter(function(){
+            
+            if ($(this).find("input[type='radio']:checked").val() === undefined) 
+		   	$(this).css({
+		   		'background-color': 'grey',
+		   	})
+
+		    .mouseleave(function() {
+
+
+            if ($(this).find("input[type='radio']:checked").val() === undefined)
+    			$(this).css({
+		   			'background-color': '#333333'
+		   		});
+  			});
+			});
+
+		   //COST SELECT CLICK EFFECT
+	      $('.cost-btn').on('click', function(){
+
+            $('.cost-btns').css({
+            	'background-color': '#333333'
+            })
+            $(this).css({
+	      		'background-color': 'white'
+	       	});
+
 	       	thelocation();
 	      
 		  });
@@ -177,12 +220,29 @@
 		<label for="art" class="interest-btn">
 			<%= f.radio_button(:interest, "Art", :id=>"art", :style=>"display: none;") %>ART</label>
 
-			<label for="film" class="interest-btn">
+		<label for="film" class="interest-btn">
 			<%= f.radio_button(:interest, "Film", :id=>"film", :style=>"display: none;") %>FILM</label>
 
-			<label for="food" class="interest-btn">
+		<label for="food" class="interest-btn">
 			<%= f.radio_button(:interest, "Food", :id=>"food", :style=>"display: none;") %>FOOD</label>
 
+	</div>
+
+
+	<div class="cost-div">
+	
+		<p class="choose-size" style = "text-align:center; padding-bottom: 100px;"> Choose a price range...</p>
+		<label for="free" class="cost-btn">
+			<%= f.radio_button(:cost, "Free", :id=>"free", :style=>"display: none;") %>FREE</label>
+
+		<label for="$" class="cost-btn">
+			<%= f.radio_button(:cost, "$", :id=>"$", :style=>"display: none;") %>$</label>
+
+		<label for="$$" class="cost-btn">
+			<%= f.radio_button(:cost, "$$", :id=>"$$", :style=>"display: none;") %>$$</label>
+
+		<label for="$$$" class="cost-btn">
+			<%= f.radio_button(:cost, "$$$", :id=>"$$$", :style=>"display: none;") %>$$</label>
 	</div>
 
 	<div class="location-div">
@@ -190,17 +250,6 @@
     	<p class='location-error'>Please enter location</p>
 	</div>	
 
-	<div class="cost-div">
-	 <%= f.label :cost %>:&nbsp;
-		<%= label_tag(:cost, "free") %>
-			<%= f.radio_button(:cost, "free") %>
-		<%= label_tag(:cost, "$") %>
-			<%= f.radio_button(:cost, "$") %>
-		<%= label_tag(:cost, "$$") %>
-			<%= f.radio_button(:cost, "$$") %>
-		<%= label_tag(:cost, "$$$") %>
-			<%= f.radio_button(:cost, "$$$") %><br>
-	</div>
 	<div class= "submit-div">
 	 <%= f.submit id: "find" %>
  	</div>
