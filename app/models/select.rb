@@ -5,6 +5,8 @@ class Select < ActiveRecord::Base
 
 	after_validation :geocode
 
+	reverse_geocoded_by :latitude, :longitude, :address => :location
+
 	def retrieve
 		Event.near(location).category(interest).grpsize(group_size).sample
 	end

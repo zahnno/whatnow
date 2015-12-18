@@ -17,6 +17,7 @@ end
 
 def show
 	@select = Select.find(params[:id])
+	@select.reverse_geocode
 	@the_one = @select.retrieve 
 
 
@@ -26,7 +27,7 @@ end
 private
 
 	def select_params
- 		params.require(:select).permit(:group_size, :interest, :location, :cost)
+ 		params.require(:select).permit(:group_size, :interest, :location, :cost, :latitude, :longitude)
 	end
 
 end

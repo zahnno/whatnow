@@ -142,4 +142,14 @@ input:focus {
 
 :-ms-input-placeholder {  
    color: #4d4d4d;  
+
+
+}
+
+.u_location {
+	width: 25px;
+}
+
+.event_form {
+	color: white;
 }

@@ -1,8 +1,14 @@
 $(document).ready(function(){
-	
-		if('geolocation' in navigator) {
-			navigator.geolocation.getCurrentPosition(success, error);
-		};
+	$('#user').on('click', function(){ 
+		var value = $(this).prop('checked');
+		if (value === true){
+			if('geolocation' in navigator) {
+				navigator.geolocation.getCurrentPosition(success, error);
+					$('.location-div #bar').fadeOut(1500);
+			}
+			
+		}
+	});
 	
 	
 
@@ -11,7 +17,8 @@ $(document).ready(function(){
 	var lat = position.coords.latitude
 	var long = position.coords.longitude
 
-		console.log(lat, long);
+		$('#select_latitude').val(lat);
+		$('#select_longitude').val(long);
 	}
 
 	function error(err){

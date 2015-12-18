@@ -45,12 +45,12 @@
 		   	welcome();
 
 		   //PREVENTING FORM SUBMISSION WHEN ENTER PRESSED
-		   $(window).keydown(function(event){
-    			if(event.keyCode == 13) {
-      				event.preventDefault();
-      			return false;
-   				}
-  			});
+		   //$(window).keydown(function(event){
+    		//	if(event.keyCode == 13) {
+      		//		event.preventDefault();
+      		//	return false;
+   			//	}
+  			//});
 
 		   //TRANSITION OF DIVISION CALLED BY TRIGGER
            $('.btn-group').on('welcomefinished', function(){
@@ -76,6 +76,7 @@
             if ($(this).find("input[type='radio']:checked").val() === undefined) 
 		   	$(this).css({
 		   		'background-color': 'grey',
+		   		'cursor': 'pointer',
 		   	})
 
 		    .mouseleave(function() {
@@ -111,6 +112,7 @@
             if ($(this).find("input[type='radio']:checked").val() === undefined) 
 		   	$(this).css({
 		   		'background-color': 'grey',
+		   		'cursor': 'pointer',
 		   	})
 
 		    .mouseleave(function() {
@@ -187,8 +189,14 @@
 	</div>
 
 	<div class="location-div">
-    	<%= f.text_field :location, :autocomplete=>"off", :placeholder=>"Enter your location..." %><br>
-	</div>
+    	<%= f.text_field :location, :id=>"bar", :autocomplete=>"on", :placeholder=>"Enter your location..." %>
+  		<input type="checkbox" class="u_location" id="user"> Use your location <br>
+  			<%= f.hidden_field :latitude %>
+  			<%= f.hidden_field :longitude %>
+  		<%= f.submit %>
+  	</div>	
+
+	
 	
 
 	<div class="cost-div">
