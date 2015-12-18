@@ -19,8 +19,10 @@ def show
 	@select = Select.find(params[:id])
 	@select.reverse_geocode
 	@the_one = @select.retrieve 
+end
 
-
+def location_bar
+	
 end
 
 
