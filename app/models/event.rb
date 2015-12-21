@@ -12,6 +12,5 @@ class Event < ActiveRecord::Base
 		Event.near(address)
 	end
 
-	
 end
 
