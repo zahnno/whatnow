@@ -3,21 +3,33 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	<script src="http://code.jquery.com/jquery-2.0.0.js"></script>
-
-	<script>
-		// function check()
-  //           {
-  //               var searchtext = document.getElementById("select_location").value;
-  //               if(searchtext=='')
-  //               {
-  //                   $('location-div').append('location-error')
-  //                   return false;
-  //               }
-  //               else {
-
-  //               }
-  //           }
+	<script src="http://code.jquery.com/jquery-2.0.0.js"></script>        
+ 	<script>
+ 		function check()
+            {
+                var searchtext = document.getElementById("select_location").value;
+                if(searchtext=='')
+                {
+                        $('.location-error').fadeIn(1500, function() {
+                    	$('.location-error').fadeOut(1500);
+                    });
+                               
+                    return false;
+                }
+                else if (searchtext.length != 0){
+					$.ajax({
+						url: $('#new_select').attr('action'),
+						type: $('new_select').attr('method'),
+						dataType: 'html',
+						data: $('#new_select').serialize(),
+						success: function(data){
+							$('.location-div').fadeOut(1500, function(){
+								$('#event').append(data).hide().fadeIn(1500);
+							});
+						}
+					});
+                }
+            }
 
 		//TRANSITION OF DIVISION CREATING TRIGGER
         function welcome() {
@@ -32,25 +44,31 @@
         	});
         };
 
-        function thelocation() {
+        function thecost() {
         	$('.interest-div').fadeOut(1500, function() {
-        		$('.location-div').trigger('interestfinished');
+        		$('.cost-div').trigger('interestfinished');
         	});
         };
 
-       
+       function thelocation() {
+       		$('.cost-div').fadeOut(1500, function() {
+        		$('.location-div').trigger('costfinished');
+        	});
+       }
 
 
 		$(document).ready(function(){
 		   	welcome();
 
 		   //PREVENTING FORM SUBMISSION WHEN ENTER PRESSED
-		   //$(window).keydown(function(event){
-    		//	if(event.keyCode == 13) {
-      		//		event.preventDefault();
-      		//	return false;
-   			//	}
-  			//});
+		   
+		   $(window).keydown(function(event){
+    			if(event.keyCode == 13) {
+      				event.preventDefault();
+      				check();
+      			return false;
+   				}
+  			});
 
 		   //TRANSITION OF DIVISION CALLED BY TRIGGER
            $('.btn-group').on('welcomefinished', function(){
@@ -61,9 +79,15 @@
            	$(this).fadeIn(1500);
            });
 
-           $('.location-div').on('interestfinished', function(){
+           $('.cost-div').on('interestfinished', function(){
            	$(this).fadeIn(1500);
            });
+
+           $('.location-div').on('costfinished', function(){
+           	$(this).fadeIn(1500);
+           });
+
+         
 
          
 			
@@ -103,7 +127,7 @@
 
 	       	interest();
 	      
-		  });
+		  	});
 
 
 	      	//INTEREST SELECT HOVER EFFECT
@@ -131,9 +155,39 @@
             $('.interest-btns').css({
             	'background-color': '#333333'
             })
-        
-        
-	      	$(this).css({
+            $(this).css({
+	      		'background-color': 'white'
+	       	});
+
+	       	thecost();
+	      
+		  });
+
+		  //COST SELECT HOVER EFFECT
+		    $('.cost-btn').mouseenter(function(){
+            
+            if ($(this).find("input[type='radio']:checked").val() === undefined) 
+		   	$(this).css({
+		   		'background-color': 'grey',
+		   	})
+
+		    .mouseleave(function() {
+
+
+            if ($(this).find("input[type='radio']:checked").val() === undefined)
+    			$(this).css({
+		   			'background-color': '#333333'
+		   		});
+  			});
+			});
+
+		   //COST SELECT CLICK EFFECT
+	      $('.cost-btn').on('click', function(){
+
+            $('.cost-btns').css({
+            	'background-color': '#333333'
+            })
+            $(this).css({
 	      		'background-color': 'white'
 	       	});
 
@@ -143,7 +197,8 @@
 
 		});
 
-	</script>
+ 	</script>
+
 
 </head>
 <body>
@@ -180,10 +235,10 @@
 		<label for="art" class="interest-btn">
 			<%= f.radio_button(:interest, "Art", :id=>"art", :style=>"display: none;") %>ART</label>
 
-			<label for="film" class="interest-btn">
+		<label for="film" class="interest-btn">
 			<%= f.radio_button(:interest, "Film", :id=>"film", :style=>"display: none;") %>FILM</label>
 
-			<label for="food" class="interest-btn">
+		<label for="food" class="interest-btn">
 			<%= f.radio_button(:interest, "Food", :id=>"food", :style=>"display: none;") %>FOOD</label>
 
 	</div>
@@ -197,24 +252,38 @@
   	</div>	
 
 	
-	
+
 
 	<div class="cost-div">
-	 <%= f.label :cost %>:&nbsp;
-		<%= label_tag(:cost, "free") %>
-			<%= f.radio_button(:cost, "free") %>
-		<%= label_tag(:cost, "$") %>
-			<%= f.radio_button(:cost, "$") %>
-		<%= label_tag(:cost, "$$") %>
-			<%= f.radio_button(:cost, "$$") %>
-		<%= label_tag(:cost, "$$$") %>
-			<%= f.radio_button(:cost, "$$$") %><br>
+	
+		<p class="choose-size" style = "text-align:center; padding-bottom: 100px;"> Choose a price range...</p>
+		<label for="free" class="cost-btn">
+			<%= f.radio_button(:cost, "Free", :id=>"free", :style=>"display: none;") %>FREE</label>
+
+		<label for="$" class="cost-btn">
+			<%= f.radio_button(:cost, "$", :id=>"$", :style=>"display: none;") %>$</label>
+
+		<label for="$$" class="cost-btn">
+			<%= f.radio_button(:cost, "$$", :id=>"$$", :style=>"display: none;") %>$$</label>
+
+		<label for="$$$" class="cost-btn">
+			<%= f.radio_button(:cost, "$$$", :id=>"$$$", :style=>"display: none;") %>$$</label>
 	</div>
+
+	<div class="location-div">
+    	<%= f.text_field :location, :autocomplete=>"off", :placeholder=>"Enter your location..." %><br>
+    	<p class='location-error'>Please enter location</p>
+	</div>	
+
 	<div class= "submit-div">
 	 <%= f.submit id: "find" %>
  	</div>
 
 <% end %>
+
+<div id="event">
+
+</div>
 
 </body>
 </html>
