@@ -46,10 +46,6 @@ def index
 				end
 		end
 	end
-<<<<<<< HEAD
-
-=======
->>>>>>> b97695e43d1f6d5aee51517726b8f2cd4a7ccaa2
 	end
 end
 
