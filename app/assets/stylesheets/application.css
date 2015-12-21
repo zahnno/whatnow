@@ -13,7 +13,19 @@
  *= require_tree .
  *= require_self
  */
+.no-match{
+	display: none;
+	text-align: center;
+	font-size: 40px;
+	font-family: arial;
+	color: white;
+	margin-top: 0px;
 
+}
+
+.no-match a {
+	text-decoration: none;
+}
 .event-details {
 	text-align: center;
 	padding-top: 70px;

@@ -9,7 +9,7 @@ class Select < ActiveRecord::Base
 	reverse_geocoded_by :latitude, :longitude, :address => :location
 
 	def retrieve
-		Event.near(location).category(interest).grpsize(group_size).sample
+		Event.near(location).category(interest).grpsize(group_size).cost(cost).sample
 	end
 
 	def get_meetup_events

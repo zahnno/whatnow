@@ -26,6 +26,15 @@
 							$('.location-div').fadeOut(1500, function(){
 								$('#event').append(data).hide().fadeIn(1500);										
 							});
+						},
+						error: function(){
+							$('.no-match').fadeIn(1500, function(){
+								$('.no-match').fadeOut(1500);
+								$('.location-div').fadeOut(1500, function(){
+									$('.btn-group').trigger('welcomefinished');
+								});
+								
+							});
 						}
 					});
                 }
@@ -89,12 +98,7 @@
            $('#event').on('locationfinished', function(){
            	
            })
-
-         
-			
-
-
-
+	
          	//GROUP SIZE HOVER EFFECT
 		   $('.btn-primary').mouseenter(function(){
             
@@ -151,7 +155,7 @@
 		   //INTEREST SELECT CLICK EFFECT
 	      $('.interest-btn').on('click', function(){
 
-            $('.interest-btns').css({
+            $('.interest-btn').css({
             	'background-color': '#333333'
             })
             $(this).css({
@@ -183,7 +187,7 @@
 		   //COST SELECT CLICK EFFECT
 	      $('.cost-btn').on('click', function(){
 
-            $('.cost-btns').css({
+            $('.cost-btn').css({
             	'background-color': '#333333'
             })
             $(this).css({
@@ -256,22 +260,27 @@
 			<%= f.radio_button(:cost, "$$", :id=>"$$", :style=>"display: none;") %>$$</label>
 
 		<label for="$$$" class="cost-btn">
-			<%= f.radio_button(:cost, "$$$", :id=>"$$$", :style=>"display: none;") %>$$</label>
+			<%= f.radio_button(:cost, "$$$", :id=>"$$$", :style=>"display: none;") %>$$$</label>
 	</div>
 
+	
 	<div class="location-div">
     	<%= f.text_field :location, :autocomplete=>"off", :placeholder=>"Enter your location..." %><input type="checkbox" class="u_location" id="user"> Use your location <br>
  			<%= f.hidden_field :latitude %>
    			<%= f.hidden_field :longitude %>
     	<p class='location-error'>Please enter location</p>
 	</div>	
-
+<div class="no-match">
+<p>Sorry, no events match your preference.</p>
+</div>
 
 <% end %>
 
 <div id="event">
 
 </div>
+
+
 
 </body>
 </html>
