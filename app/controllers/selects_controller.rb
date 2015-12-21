@@ -46,6 +46,7 @@ def index
 					redirect_to events_path(@events)
 				end
 		end
+	end
 
 	end
 end
