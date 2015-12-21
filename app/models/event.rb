@@ -8,7 +8,4 @@ class Event < ActiveRecord::Base
 	geocoded_by :address
 	after_validation :geocode
 
-	def retrieve		
-		# Event.near(location).category(interest).grpsize(group_size).sample
-	end
 end
