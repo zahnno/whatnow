@@ -12,7 +12,6 @@ def create
 	@select = Select.new(select_params)
 	@select.reverse_geocode
 	@event = @select.retrieve
-	@event.save
 
 	respond_to do |format|
 		format.html do
@@ -46,7 +45,7 @@ def index
 					redirect_to events_path(@events)
 				end
 		end
-
+	end
 	end
 end
 
@@ -77,3 +76,5 @@ private
 	end
 
 end
+
+
