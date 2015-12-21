@@ -23,7 +23,9 @@
 						dataType: 'html',
 						data: $('#new_select').serialize(),
 						success: function(data){
-							$('#event').append(data);
+							$('.location-div').fadeOut(1500, function(){
+								$('#event').append(data).hide().fadeIn(1500);
+							});
 						}
 					});
                 }
@@ -83,6 +85,8 @@
            $('.location-div').on('costfinished', function(){
            	$(this).fadeIn(1500);
            });
+
+         
 
          
 			
