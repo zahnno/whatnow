@@ -10,3 +10,12 @@ italian = Event.create(name: "Mamacita", category: "Food", grpsize: "Couple", ad
 golf = Event.create(name: "Pro Golf", category: "Sports", grpsize: "Group", address: "500 King Street West, Toronto, ON", phone: "(152)-345-4443", cost: 40, link: "Progolf.com")
 movie = Event.create(name: "Terminator", category: "Film", grpsize: "Couple", address: "5 Brendan Court, Thornhill, ON", phone: "(522)-645-2345", cost: 20, link: "cineplex.com")
 artshow = Event.create(name: "Art Museum", category: "Art", grpsize: "Couple", address: "475 Queen Street West, Toronto, ON", phone: "(455)-324-6543", cost: 15, link: "gallery.com")
+
+params = { category: '1',
+	city: 'Toronto',
+	country: 'CA',
+	status: 'upcoming',
+	format: 'json',
+	page: '50' }
+	meetup_api = MeetupApi.new
+	events = meetup_api.open_events(params)

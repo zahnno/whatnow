@@ -11,4 +11,7 @@ class Event < ActiveRecord::Base
 	def retrieve		
 		Event.near(address)
 	end
+
+	
 end
+
