@@ -10,6 +10,9 @@ end
 
 def create
 	@select = Select.new(select_params)
+	@select.reverse_geocode
+	@event = @select.retrieve
+	@event.save
 
 	respond_to do |format|
 		format.html do

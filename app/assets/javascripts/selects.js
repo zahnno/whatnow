@@ -25,7 +25,7 @@ $(document).ready(function(){
 			method: 'get',
 			dataType: 'html',
 			success: function(data){
-				$('.location-div #bar').html(data);
+				$('.location-div #select_location').html(data);
 			},
 			data: {latitude: lat, longitude: long}
 

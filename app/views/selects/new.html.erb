@@ -19,12 +19,12 @@
                 else if (searchtext.length != 0){
 					$.ajax({
 						url: $('#new_select').attr('action'),
-						type: $('new_select').attr('method'),
+						method: $('#new_select').attr('method'),
 						dataType: 'html',
 						data: $('#new_select').serialize(),
 						success: function(data){
 							$('.location-div').fadeOut(1500, function(){
-								$('#event').append(data).hide().fadeIn(1500);
+								$('#event').append(data).hide().fadeIn(1500);										
 							});
 						}
 					});
@@ -61,7 +61,6 @@
 		   	welcome();
 
 		   //PREVENTING FORM SUBMISSION WHEN ENTER PRESSED
-		   
 		   $(window).keydown(function(event){
     			if(event.keyCode == 13) {
       				event.preventDefault();
@@ -87,7 +86,9 @@
            	$(this).fadeIn(1500);
            });
 
-         
+           $('#event').on('locationfinished', function(){
+           	
+           })
 
          
 			
@@ -100,7 +101,6 @@
             if ($(this).find("input[type='radio']:checked").val() === undefined) 
 		   	$(this).css({
 		   		'background-color': 'grey',
-		   		'cursor': 'pointer',
 		   	})
 
 		    .mouseleave(function() {
@@ -136,7 +136,6 @@
             if ($(this).find("input[type='radio']:checked").val() === undefined) 
 		   	$(this).css({
 		   		'background-color': 'grey',
-		   		'cursor': 'pointer',
 		   	})
 
 		    .mouseleave(function() {
@@ -243,16 +242,6 @@
 
 	</div>
 
-	<div class="location-div">
-    	<%= f.text_field :location, :id=>"bar", :autocomplete=>"on", :placeholder=>"Enter your location..." %>
-  		<input type="checkbox" class="u_location" id="user"> Use your location <br>
-  			<%= f.hidden_field :latitude %>
-  			<%= f.hidden_field :longitude %>
-  		<%= f.submit %>
-  	</div>	
-
-	
-
 
 	<div class="cost-div">
 	
@@ -275,9 +264,6 @@
     	<p class='location-error'>Please enter location</p>
 	</div>	
 
-	<div class= "submit-div">
-	 <%= f.submit id: "find" %>
- 	</div>
 
 <% end %>
 
