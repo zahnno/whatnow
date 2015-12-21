@@ -61,8 +61,9 @@ def show
 end
 
 def location_bar
-	
-	@event = @event.retrieve 
+	result = Geocoder.search("#{params['latitude']},#{params['longitude']}")
+	address = result.first.data["formatted_address"]
+	render html: address
 end
 
 
