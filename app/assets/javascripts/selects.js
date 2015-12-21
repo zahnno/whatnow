@@ -14,20 +14,20 @@ $(document).ready(function(){
 
 	function success(position){
 
-		var lat = position.coords.latitude
-		var long = position.coords.longitude
+		var userLat = position.coords.latitude
+		var userLong = position.coords.longitude
 
-		$('#select_latitude').val(lat);
-		$('#select_longitude').val(long);
+		$('#select_latitude').val(userLat);
+		$('#select_longitude').val(userLong);
 
 		$.ajax({
-			url: '/select/location',
+			url: '/selects/location',
 			method: 'get',
 			dataType: 'html',
-			success: function(data){
-				$('.location-div #select_location').html(data);
+			success: function(d){
+				$('.location-div #select_location').val(d);
 			},
-			data: {latitude: lat, longitude: long}
+			data: {latitude: userLat, longitude: userLong}
 
 		})
 	}
