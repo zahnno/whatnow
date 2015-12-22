@@ -26,15 +26,18 @@
 .no-match a {
 	text-decoration: none;
 }
+
 .event-details {
+
 	text-align: center;
 	padding-top: 70px;
+	color: white;
+	font-family: arial;
 }
 
 .event-details img {
      border-radius: 50%;
      overflow: hidden;
-     border: 2px solid black ;
      width: 225px;
      height: 225px;
      margin-top: 20px; 
@@ -42,14 +45,17 @@
 
  .choose-size{
  	font-size: 35px;
- 	font-style: italic;
+ 	font-family: arial;
+ 	color: white;
+ 	font-size: 100px;
+ 	margin: 10px;
  }
 
  .cost-btn {
 	font-family: arial;
-	color: black;
+	color: white;
 	font-size: 30px;
-	border: 1px solid black;
+	border: 1px solid white;
 	border-radius: 3px;
 	padding: 20px 40px;
 	margin-left: 40px;
@@ -57,9 +63,9 @@
  
 .interest-btn{
 	font-family: arial;
-	color: black;
-	font-size: 30px;
-	border: 1px solid black;
+	color: white;
+	font-size: 20px;
+	border: 1px solid white;
 	border-radius: 3px;
 	padding: 20px 40px;
 	margin-left: 40px;
@@ -96,8 +102,23 @@ input:focus {
 	display: none;
 	text-align: center;
 	padding-top: 200px;
+
 }
 
+.location-btn {
+	display: inline-block;
+    height: 20px;
+    width: 170px;
+	margin-top: 20px;
+	font-family: arial;
+	color: white;
+	font-size: 20px;
+	border: 1px solid #262626;
+	border-radius: 3px;
+	padding: 10px 20px;
+	background-color: #262626;
+	margin-left: 40px;
+}
 .time-div {
 	display: none;
 }
@@ -116,13 +137,12 @@ input:focus {
 
 .btn-primary {
 	font-family: arial;
-	color: black;
-	font-size: 30px;
-	border: 2px solid black;
+	color: white;
+	font-size: 20px;
+	border: 1px solid white;
 	border-radius: 3px;
 	padding: 20px 40px;
 	margin-left: 40px;
-
 }
 
 .btn-primary:hover {
@@ -196,6 +216,10 @@ input:focus {
 
 .event_form {
 	color: white;
+}
+
+.event-name{
+	font-style: italic;
 }
 
 .destination {
