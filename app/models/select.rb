@@ -14,7 +14,7 @@ class Select < ActiveRecord::Base
 
 	def get_meetup_events
 		params = { category: '1',
-	      city: self.location,
+	      city: 'toronto',
 	      country: 'CA',
 	      status: 'upcoming',
 	      format: 'json',

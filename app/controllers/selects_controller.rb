@@ -31,28 +31,29 @@ def index
 	@select.save
 	@events = @events.category(@select.interest)
 	@event = @events.grpsize(@select.group_size).order('random()').limit(1)
-	
+	@events = @select.get_meetup_events 
 
 	if @select.save
-		
-		redirect_to select_path(@select)
+		# @event = @select.get_meetup_events.first.inspect
+		# redirect_to select_path(@select)
 
-	respond_to do |format|
-		format.html do
+		respond_to do |format|
+			format.html do
 				if request.xhr?
+					byebug
 					render @event
 				else 
-					redirect_to events_path(@events)
+					redirect_to event_path(@events)
 				end
+			end
 		end
-	end
 	end
 end
 
 def show
 	@select = Select.find(params[:id])
 
-	@events = @select.get_meetup_events 
+	
 
 	@select.reverse_geocode
 
