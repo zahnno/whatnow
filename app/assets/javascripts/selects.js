@@ -26,6 +26,7 @@ $(document).ready(function(){
 			dataType: 'html',
 			success: function(d){
 				$('.location-div #select_location').val(d);
+				$('.location-btn').css({'background-color' : '#333333'});
 			},
 			data: {latitude: userLat, longitude: userLong}
 
