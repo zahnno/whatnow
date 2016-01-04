@@ -1,28 +1,11 @@
-== README
+Whatnow is a web application that provides users an upcoming event taking place on the same day based on their preferences.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+In Terminal 
 
-Things you may want to cover:
+- Git clone SSH Key
+- Rails s
+- Open in webrowser localhost:3000
 
-* Ruby version
+bundle install just to be safe
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Please message if you'd like to contribute.
