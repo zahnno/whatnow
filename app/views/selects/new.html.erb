@@ -98,9 +98,6 @@
            	$(this).fadeIn(1500);
            });
 
-           $('#event').on('locationfinished', function(){
-           	
-           })
 	
          	//GROUP SIZE HOVER EFFECT
 		   $('.btn-primary').mouseenter(function(){
@@ -215,7 +212,7 @@
 
             if ($(this).find("input[type='checkbox']:checked").val() === undefined)
     			$(this).css({
-		   			'background-color': '#333333'
+		   			'background-color': '#262626'
 		   		});
   			});
 			});
@@ -230,6 +227,11 @@
 	       	});
 
 		  });
+
+		  if ($('.location-btn').find("input[type='radio']:checked").val() === undefined)
+    			$(this).css({
+		   			'background-color': '#262626'
+		   		});
 
 		});
 
