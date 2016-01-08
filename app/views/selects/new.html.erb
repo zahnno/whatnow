@@ -10,8 +10,8 @@
                 var searchtext = document.getElementById("select_location").value;
                 if(searchtext=='')
                 {
-                        $('.location-error').fadeIn(1500, function() {
-                    	$('.location-error').fadeOut(1500);
+                        $('.location-error').fadeIn(100, function() {
+                    	$('.location-error').fadeOut(100);
                     });
                                
                     return false;
@@ -24,15 +24,15 @@
 						dataType: 'html',
 						data: $('#new_select').serialize(),
 						success: function(data){
-							$('.location-div').fadeOut(1500, function(){
-								$('#event').append(data).hide().fadeIn(1500);									
+							$('.location-div').fadeOut(100, function(){
+								$('#event').append(data).hide().fadeIn(100);									
 							});
 						},
 						error: function(){
 
-							$('.no-match').fadeIn(1500, function(){
-								$('.no-match').fadeOut(1500);
-								$('.location-div').fadeOut(1500, function(){
+							$('.no-match').fadeIn(100, function(){
+								$('.no-match').fadeOut(100);
+								$('.location-div').fadeOut(100, function(){
 									$('.btn-group').trigger('welcomefinished');
 
 								});
@@ -45,25 +45,25 @@
 
 		//TRANSITION OF DIVISION CREATING TRIGGER
         function welcome() {
-		  $('.intro').fadeIn(1500).fadeOut(1500, function() {
+		  $('.intro').fadeIn(100).fadeOut(100, function() {
 	        $('.btn-group').trigger('welcomefinished');
 	      });
         };
 
         function interest() {
-        	$('.btn-group').fadeOut(1500, function() {
+        	$('.btn-group').fadeOut(100, function() {
         		$('.interest-div').trigger('sizefinished');
         	});
         };
 
         function thecost() {
-        	$('.interest-div').fadeOut(1500, function() {
+        	$('.interest-div').fadeOut(100, function() {
         		$('.cost-div').trigger('interestfinished');
         	});
         };
 
        function thelocation() {
-       		$('.cost-div').fadeOut(1500, function() {
+       		$('.cost-div').fadeOut(100, function() {
         		$('.location-div').trigger('costfinished');
         	});
        }
@@ -83,19 +83,19 @@
 
 		   //TRANSITION OF DIVISION CALLED BY TRIGGER
            $('.btn-group').on('welcomefinished', function(){
-        	 $(this).fadeIn(1500);
+        	 $(this).fadeIn(100);
            });
 
            $('.interest-div').on('sizefinished', function(){
-           	$(this).fadeIn(1500);
+           	$(this).fadeIn(100);
            });
 
            $('.cost-div').on('interestfinished', function(){
-           	$(this).fadeIn(1500);
+           	$(this).fadeIn(100);
            });
 
            $('.location-div').on('costfinished', function(){
-           	$(this).fadeIn(1500);
+           	$(this).fadeIn(100);
            });
 
 	
@@ -299,7 +299,8 @@
 
 	
 	<div class="location-div">
-    	<%= f.text_field :location, :autocomplete=>"off", :placeholder=>"Enter your location..." %><br>
+	<p class="choose-location">Enter your location</p>
+    	<%= f.text_field :location, :autocomplete=>"off", :placeholder=>"Enter your location here..." %><br>
     	<label for="user" class="location-btn">
 
     	<input type="checkbox" class="u_location" id="user" style="display:none;">

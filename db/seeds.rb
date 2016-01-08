@@ -6,14 +6,29 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-params = { category: '1',
-	city: 'Toronto',
-	country: 'CA',
-	status: 'upcoming',
-	format: 'json',
-	page: '50' }
-	meetup_api = MeetupApi.new
-	events = meetup_api.open_events(params)
+
+	params = { category: '1',
+	      city: 'toronto',
+	      country: 'CA',
+	      status: 'upcoming',
+	      format: 'json',
+	      page: '20'}
+	    meetup_api = MeetupApi.new
+	    events = meetup_api.open_events(params)
+	    result = events['results'].first
+	    event1 = Event.create(
+	    	name: result['name'], 
+	    	# address: [result['venue']['address_1'], result['venue']['city']], 
+	    	address: "220 King Street West, Toronto, ON",
+	    	eventtime: result['time'], 
+	    	phone: result['venue']['phone'], 
+	    	# cost: result['fee'], 
+	    	link: result['event_url'], 
+	    	photo: result['photo_url'],
+	    	category: "Art",
+	    	grpsize: "Group",
+	    	cost: "Free"
+	    	)
 
 paintball = Event.create(name: "AGGPaintBall", category: "Sports", grpsize: "Group", address: "220 King Street West, Toronto, ON", phone: "(905)-345-7654", cost: "$", link: "paintball.com", photo: "http://www.esnleiria.com/sites/default/files/events/images/paye-50-000-dollars-pour-tester-des-billes-de-paintball-01.jpg")
 italian = Event.create(name: "Mamacita", category: "Food", grpsize: "Couple", address: "2076 Bathurst Street, Toronto, ON", phone: "(934)-345-7654", cost: "$$", link: "mamacita.com", photo: "http://www.palmroyaleresort.com/Photos/AlbumItems/Il%20Portico%20-%20Italian%20Restaurant_4ef42_lg.jpg")
