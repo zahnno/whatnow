@@ -1,0 +1,1 @@
+EventbriteAPI::Configuration.access_token="YUM77WUQ2NXJCFA6DZA7"

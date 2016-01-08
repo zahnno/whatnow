@@ -10,8 +10,8 @@
                 var searchtext = document.getElementById("select_location").value;
                 if(searchtext=='')
                 {
-                        $('.location-error').fadeIn(1500, function() {
-                    	$('.location-error').fadeOut(1500);
+                        $('.location-error').fadeIn(100, function() {
+                    	$('.location-error').fadeOut(100);
                     });
                                
                     return false;
@@ -24,8 +24,8 @@
 						dataType: 'html',
 						data: $('#new_select').serialize(),
 						success: function(data){
-							$('.location-div').fadeOut(1500, function(){
-								$('#event').append(data).hide().fadeIn(1500);									
+							$('.location-div').fadeOut(100, function(){
+								$('#event').append(data).hide().fadeIn(100);									
 							});
 						},
 						error: function(){
@@ -299,7 +299,8 @@
 
 	
 	<div class="location-div">
-    	<%= f.text_field :location, :autocomplete=>"off", :placeholder=>"Enter your location..." %><br>
+	<p class="choose-location">Enter your location</p>
+    	<%= f.text_field :location, :autocomplete=>"off", :placeholder=>"Enter your location here..." %><br>
     	<label for="user" class="location-btn">
 
     	<input type="checkbox" class="u_location" id="user" style="display:none;">
