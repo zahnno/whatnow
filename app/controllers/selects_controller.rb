@@ -11,13 +11,14 @@ end
 def create
 	@select = Select.new(select_params)
 	@select.reverse_geocode
+	@events= @select.allevents
 	@event = @select.retrieve
 
 	respond_to do |format|
 		format.html do
 			if @select.save
 				if request.xhr?
-					render @event
+					render @event, locals: {events: @events}
 				else 
 					redirect_to events_path(@events)
 				end

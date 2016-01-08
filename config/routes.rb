@@ -6,7 +6,7 @@ get 'selects/location',
 	to: 'selects#location_bar'
 
 resources :selects, only: [:new, :create, :show, :index]
-resources :events, only: [:show]
+resources :events, only: [:show, :index]
 
 end
 

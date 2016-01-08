@@ -30,9 +30,9 @@
 						},
 						error: function(){
 
-							$('.no-match').fadeIn(1500, function(){
-								$('.no-match').fadeOut(1500);
-								$('.location-div').fadeOut(1500, function(){
+							$('.no-match').fadeIn(100, function(){
+								$('.no-match').fadeOut(100);
+								$('.location-div').fadeOut(100, function(){
 									$('.btn-group').trigger('welcomefinished');
 
 								});
@@ -45,25 +45,25 @@
 
 		//TRANSITION OF DIVISION CREATING TRIGGER
         function welcome() {
-		  $('.intro').fadeIn(1500).fadeOut(1500, function() {
+		  $('.intro').fadeIn(100).fadeOut(100, function() {
 	        $('.btn-group').trigger('welcomefinished');
 	      });
         };
 
         function interest() {
-        	$('.btn-group').fadeOut(1500, function() {
+        	$('.btn-group').fadeOut(100, function() {
         		$('.interest-div').trigger('sizefinished');
         	});
         };
 
         function thecost() {
-        	$('.interest-div').fadeOut(1500, function() {
+        	$('.interest-div').fadeOut(100, function() {
         		$('.cost-div').trigger('interestfinished');
         	});
         };
 
        function thelocation() {
-       		$('.cost-div').fadeOut(1500, function() {
+       		$('.cost-div').fadeOut(100, function() {
         		$('.location-div').trigger('costfinished');
         	});
        }
@@ -83,19 +83,19 @@
 
 		   //TRANSITION OF DIVISION CALLED BY TRIGGER
            $('.btn-group').on('welcomefinished', function(){
-        	 $(this).fadeIn(1500);
+        	 $(this).fadeIn(100);
            });
 
            $('.interest-div').on('sizefinished', function(){
-           	$(this).fadeIn(1500);
+           	$(this).fadeIn(100);
            });
 
            $('.cost-div').on('interestfinished', function(){
-           	$(this).fadeIn(1500);
+           	$(this).fadeIn(100);
            });
 
            $('.location-div').on('costfinished', function(){
-           	$(this).fadeIn(1500);
+           	$(this).fadeIn(100);
            });
 
 	
