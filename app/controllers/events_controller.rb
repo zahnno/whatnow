@@ -1,4 +1,5 @@
 class EventsController < ApplicationController
+<<<<<<< HEAD
 before_filter :load_select
 
 def index
