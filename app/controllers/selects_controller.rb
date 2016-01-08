@@ -11,7 +11,7 @@ end
 def create
 	@select = Select.new(select_params)
 	@select.reverse_geocode
-	@events= @select.allevents
+	@events = @select.allevents
 	@event = @select.retrieve
 
 	respond_to do |format|

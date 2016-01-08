@@ -1,4 +1,10 @@
-<h1>COOL BEANS</h1>
-<% events.each do |event| %>
-<%= event.name %>
+<h1 class="event-name" style="font-size: 35px; ">More Events</h1>
+<div class="border">
+<% @events.each do |event| %>
+	
+	<br/><%= event.name %>,<br/>
+	<img src="<%= event.photo %>"><br/> 
+	<%= event.address %>,<br/>
+    <%= event.link %><br>
 <%  end %>
+</div>
