@@ -6,7 +6,7 @@ def index
 end
 
 def show
-	@events = Event.allevents
+	@event = Event.find(params[:id])
 end
 
 private 
