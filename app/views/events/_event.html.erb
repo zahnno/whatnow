@@ -1,17 +1,16 @@
 
 
 <div class="event-details">
-	<a href= "events/show"><div class="border">
+	<div class="border">
     <img src="<%= event.photo %>">
         <h1 class="event-name" style="font-size: 35px;">
-       		<%= event.name %></h1>
-            <div style="font-color: black;">
+       		<%= link_to event.name, event_path(event) %></h1>
             <%= event.name %><br>
             <%= event.address %><br>
             <%= event.phone %><br>
             <%= event.actualcost %><br>
             <%= event.link %><br>
-            </div>
+            
 	</div>
 <div class="MoreEvents">
  <%= link_to "More Events", events_path %>

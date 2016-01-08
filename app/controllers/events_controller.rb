@@ -1,4 +1,5 @@
 class EventsController < ApplicationController
+<<<<<<< HEAD
 before_filter :load_select
 
 def index
@@ -7,6 +8,7 @@ end
 
 def show
 	@events = Event.allevents
+	@event = Event.find(params[:id])
 end
 
 private 
@@ -14,6 +16,7 @@ private
 def load_select
 		@select = Select.all
 end
+
 
 
 end
