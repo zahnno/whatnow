@@ -15,5 +15,4 @@ def load_select
 		@select = Select.all
 end
 
-
 end
