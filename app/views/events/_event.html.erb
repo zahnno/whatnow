@@ -4,7 +4,7 @@
 	<div class="border">
     <img src="<%= event.photo %>">
         <h1 class="event-name" style="font-size: 35px;">
-       		<%= link_to event.name, event_path(event) %></h1>
+       		<%= link_to event.name, event_path(event), class: "tagging" %></h1>
             <%= event.name %><br>
             <%= event.address %><br>
             <%= event.phone %><br>
@@ -13,7 +13,7 @@
             
 	</div>
 <div class="MoreEvents">
- <%= link_to "More Events", events_path %>
+ <%= link_to "More Events", events_path, class: "linkto" %>
 </div>
 </div>
 

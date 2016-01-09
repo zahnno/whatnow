@@ -1,17 +1,18 @@
-<div class="event-details" style="margin-left: 40px; margin-top: 20px;">
-	<div class="border">
-    <img src="<%= @event.photo %>">
-        <h1 class="event-name" style="font-size: 35px;"></h1>
-            
-	</div>
-
+<div class="event-pic">
+    <img src="<%= @event.photo %>" style= "width:475px; height: 475px; margin-top:20px;">
 </div>
 
 
-<div class="description"> 
-<h1 class="ds" style="margin-left: 1000px; margin-top: 20px;">Description</h1>     
-            <%= @event.name %><br>
-            <%= @event.address %><br>
-            <%= @event.phone %><br>
-            <%= @event.actualcost %><br>
-            <%= @event.link %><br></div>
+<div class="description">  
+	<div style="font-size: 60px; font-family: arial; font-weight: bold;">  
+    	<%= @event.name %><br>
+    </div>
+    <div style="padding-top: 50px;text-align: center; font-family: arial; font-size: 22px;">
+    <%= @event.actualcost %><br>
+	<%= @event.description %><br>
+	<a href="<%= @event.link %>" class="linkto" style="color:black;"><%= @event.link %></a><br>
+    <%= @event.address %><br>
+    <%= @event.phone %><br>
+
+    </div>
+</div>

@@ -1,10 +1,19 @@
-<h1 class="event-name" style="font-size: 35px; ">More Events</h1>
-<div class="border">
+<div class="allevents">
 <% @events.each do |event| %>
-	
-	<br/><%= event.name %>,<br/>
-	<img src="<%= event.photo %>"><br/> 
-	<%= event.address %>,<br/>
-    <%= event.link %><br>
-<%  end %>
+<div class="index-details" style= "display: inline-block">
+    <div class="border">
+    	<img src="<%= event.photo %>">
+    	<div class="eventinfo">
+        <h1 class="event-name" style="font-size: 35px;">
+  		<%= link_to event.name, event_path(event) %></h1>
+        <a href="<%= event.link %>" style="color:grey; font-size:12px;"><%= event.link %></a><br>
+        <%= event.address %><br>
+        <%= event.phone %><br>
+        <%= event.actualcost %><br>
+       
+        </div>
+            
+     </div>
+</div>
+<% end %>
 </div>

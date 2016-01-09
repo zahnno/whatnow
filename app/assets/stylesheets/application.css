@@ -13,6 +13,82 @@
  *= require_tree .
  *= require_self
  */
+.event-pic{
+ margin-top: 10px;
+ width:40%;
+ display: block;
+ float:left;
+}
+
+.event-pic img{
+	margin-left:80px;
+	border-radius: 50%;
+
+}
+
+.index-details {
+    text-align: center;
+	color: white;
+	font-family: arial;
+	margin: 0 auto;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	width: 30%;
+	height: 320px;
+	border: 1px solid black;
+	border-radius: 50%;
+	background: black;
+	margin-left: 20px;
+	margin-bottom: 30px;
+}
+.index-details img{
+	 border-radius: 50%;
+     overflow: hidden;
+     width: 150px;
+     height: 150px;
+     margin-top: 20px; 
+}
+.eventinfo{
+	font-size: 12px;
+	text-decoration: none;
+
+}
+
+.eventinfo a{
+	text-decoration: none;
+	color: white;
+	font-size: 25px;
+}
+
+.eventinfo a:hover {
+	color:grey;
+}
+
+.linkto{
+	margin-top: 5px;
+	text-decoration: none;
+	color: white;
+}
+
+.linkto:hover {
+	color:darkgrey;
+
+}
+
+.tagging{
+ text-decoration: none;
+ color: white;
+}
+
+.tagging:hover {
+ color:darkgrey;
+} 
+
+.allevents { 
+margin-left: 20px;
+margin-top: 50px;
+ }
+
  .choose-location {
 	font-size: 85px;
 	text-align: center;
@@ -45,9 +121,11 @@
 	padding-top: 20px;
 	padding-bottom: 20px;
 	width: 38%;
+	height: 420px;
 	border: 1px solid black;
 	border-radius: 50%;
 	background: black;
+	font-size: 13px;
 }
 
 #event {
@@ -242,6 +320,7 @@ input:focus {
 .event-name{
 	font-style: italic;
 	color: white;
+	margin-bottom: 15px;
 }
 
 .border{
@@ -259,7 +338,9 @@ text-align: center;
 
 .description {
 	float: right;
-	margin-right: 25px;
+	margin-right: 90px;
+	margin-top: 50px;
+	display: inline-block;
 }
 
 .ds {
