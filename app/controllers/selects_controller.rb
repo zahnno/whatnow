@@ -1,6 +1,8 @@
 class SelectsController < ApplicationController
 before_filter :load_events
 
+layout false, only: [:show]
+
 def new
 	@select = Select.new
 	@group = ["Solo", "Couple", "Group"]

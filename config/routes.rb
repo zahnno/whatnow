@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-root'selects#new'
+root'selects#show'
 
 get 'selects/location',
 	to: 'selects#location_bar'
