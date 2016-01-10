@@ -4,15 +4,19 @@
 
 
 <div class="description">  
-	<div style="font-size: 60px; font-family: arial; font-weight: bold;">  
+	<div style="font-size: 60px; font-family: arial; font-weight: bold; color: white;">  
     	<%= @event.name %><br>
     </div>
-    <div style="padding-top: 50px;text-align: center; font-family: arial; font-size: 22px;">
+    <div style="text-align: center; font-family: arial; font-size: 22px; margin-bottom: 20px;">
     <%= @event.actualcost %><br>
-	<%= @event.description %><br>
-	<a href="<%= @event.link %>" class="linkto" style="color:black;"><%= @event.link %></a><br>
+	<%= @event.description %><br><br>
+	<a href="<%= @event.link %>" class="linkto"><%= @event.link %></a><br><br>
     <%= @event.address %><br>
     <%= @event.phone %><br>
 
     </div>
+
+    <%= link_to "More Events", events_path(@events), class: 'linktomore' %>
+
 </div>
+

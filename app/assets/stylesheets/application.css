@@ -61,17 +61,17 @@
 }
 
 .eventinfo a:hover {
-	color:grey;
+	color:darkgrey;
 }
 
 .linkto{
-	margin-top: 5px;
+	margin-top: 15px;
 	text-decoration: none;
 	color: white;
 }
 
 .linkto:hover {
-	color:darkgrey;
+	color:blue;
 
 }
 
@@ -81,7 +81,7 @@
 }
 
 .tagging:hover {
- color:darkgrey;
+ color:grey;
 } 
 
 .allevents { 
@@ -173,7 +173,7 @@ margin-top: 50px;
  	width: 100%;
 	height: 200px;
 	text-align: center;
-	padding-top: 125px;
+	padding-top: 10%;
 	display: none;
  }
 input { 
@@ -199,7 +199,7 @@ input:focus {
 .location-div {
 	display: none;
 	text-align: center;
-	padding-top: 50px;
+	padding-top: 5%;
 }
 
 .location-btn {
@@ -225,7 +225,7 @@ input:focus {
 	width: 100%;
 	height: 200px;
 	text-align: center;
-	padding-top: 100px;
+	padding-top: 10%;
 }
 
 .submit-div {
@@ -250,7 +250,7 @@ input:focus {
 	width: 100%;
 	height: 200px;
 	text-align: center;
-	padding-top: 125px;
+	padding-top: 10%;
 }
 
  body {
@@ -338,11 +338,37 @@ text-align: center;
 
 .description {
 	float: right;
-	margin-right: 90px;
+	text-align: center;
+	color: #b3b3b3;
 	margin-top: 50px;
 	display: inline-block;
+	width: 50%;
+}
+
+.linktomore {
+	text-decoration: none;
+	color: white;
+	font-family: arial;
+	font-size: 15px;
+}
+
+.linktomore:hover {
+	color: blue;
 }
 
 .ds {
 	margin-top: -200px;
+}
+
+.background {
+	background-color: black;
+	width: 100%;
+	height: 100px;
+}
+a{
+	-webkit-transition: color .4s linear; 
+	-moz-transition: color .4s linear; 
+	-ms-transition: color .4s linear; 
+	-o-transition: color .4s linear; 
+	transition: color .4s linear;
 }
