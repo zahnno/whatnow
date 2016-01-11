@@ -39,7 +39,6 @@ ifly = Event.create(name: "iFly Toronto", category: "Sports", grpsize: "Group", 
 # film $$
 #film $$$
 # food $
-brewfest = Event.create(name: "2016 Toronto Winter Brewfest", category: "Food", grpsize: "Group", address: "100 Princes' Blvd #1, Toronto, ON", phone: "(416) 263-3000", cost: "$", link: "http://brewfest.ca/toronto/buy-tickets.php", photo: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTWz3Ie56lWq4Mu4Habw-VtwvAmC-kT3a0ya0qguH8l54M3aQVj8A")
 burrito_Boyz = Event.create(name: "Burrito Boyz", category: "Food", grpsize: "Group", address: "224 Adelaide Street West, Toronto, ON", phone: "(647) 439-4065", cost: "$", link: "http://www.burritoboyz.ca", photo:"http://burritoboyz.ca/wp-content/themes/burritoboyz/library/images/logo-pedro-big.png")
 smokes_poutinerie = Event.create(name: "Smoke's Poutinerie", category: "Food", grpsize: "Group", address: "218 Adelaide Street West, Toronto, ON  M5H 1W7", phone: "(416) 599-2873", cost: "$", link: "https://smokespoutinerie.com/Locations.aspx", photo: "http://www.smokespoutinerie.com/smokes_logo.jpg")
 fat_bastard_burrito = Event.create(name: "Fat Bastard Burrito", category: "Food", grpsize: "Group", address: "254 Adelaide St W, Toronto, ON M5H 1X6", phone: "(647) 345-8835", cost: "$", link:"http://www.fatbastardburrito.ca/", photo:"https://pbs.twimg.com/profile_images/515666539257688064/BtJtIKUh_400x400.png")

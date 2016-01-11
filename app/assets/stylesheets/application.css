@@ -360,11 +360,6 @@ text-align: center;
 	margin-top: -200px;
 }
 
-.background {
-	background-color: black;
-	width: 100%;
-	height: 100px;
-}
 a{
 	-webkit-transition: color .4s linear; 
 	-moz-transition: color .4s linear; 
