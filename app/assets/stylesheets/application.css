@@ -13,11 +13,78 @@
  *= require_tree .
  *= require_self
  */
+.tpic{
+	width: 220px;
+	height: 220px;
+	border-radius: 50%;
+}
+
+.makers {
+	width: 25%;
+	display: inline-block;
+	margin-left: 80px;
+	margin-bottom: 100px;
+	font-family: arial;
+	text-align: center;	
+	padding:5px;
+	padding-top: 20px;
+	color: white;
+	line-height: 25px;
+}
+
+.creators{
+	width: 100%;
+	height: 500px;
+ }
+
+.rpic{
+	width: 300px;
+	height: 300px;
+}
+ .rails{
+	width: 25%;
+	display: inline-block;
+	margin-left: 70px;
+ }
+
+ .appdesc{
+ 	padding-top: 50px;
+	color:white;
+	font-family: arial;
+	text-align: center;
+	width: 60%;
+	font-size: 20px;
+	line-height: 30px;
+	margin: auto;
+	margin-bottom: 100px;
+ }
+
+.stack{
+	margin-top: 40px;
+	padding-top: 40px;
+	width: 100%;
+	height: 500px;
+	background: grey;
+}
+
+.about{
+	text-decoration: none;
+	color: white;
+	font-family: arial;
+	font-weight: bold;
+	display: inline-block;
+	position: relative;
+	float: right;
+	margin-right: 6%;
+	top: 40px;
+
+ }
+
 .event-pic{
- margin-top: 10px;
- width:40%;
- display: block;
- float:left;
+ 	margin-top: 10px;
+ 	width:40%;
+ 	display: block;
+ 	float:left;
 }
 
 .event-pic img{
@@ -76,17 +143,17 @@
 }
 
 .tagging{
- text-decoration: none;
- color: white;
+ 	text-decoration: none;
+ 	color: white;
 }
 
 .tagging:hover {
- color:grey;
+ 	color:grey;
 } 
 
 .allevents { 
-margin-left: 20px;
-margin-top: 50px;
+	margin-left: 20px;
+	margin-top: 50px;
  }
 
  .choose-location {
@@ -272,6 +339,7 @@ input:focus {
 .logo {
 	width:100px;
 	height: 100px;
+	display: inline-block;
 }
 
 .top-banner {
@@ -329,11 +397,11 @@ input:focus {
 
 .destination {
 	color: #fff;
-font-size: 2em;
-font-weight: bold;
-font-family: Helvetica;
-text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
-text-align: center;
+	font-size: 2em;
+	font-weight: bold;
+	font-family: Helvetica;
+	text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+	text-align: center;
 }
 
 .description {
