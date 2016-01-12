@@ -80,6 +80,10 @@
 
  }
 
+ .about:hover{
+ 	color:grey;
+ }
+
 .event-pic{
  	margin-top: 10px;
  	width:40%;
