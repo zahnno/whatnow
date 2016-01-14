@@ -1,22 +1,22 @@
-<div class="event-pic">
-    <img src="<%= @event.photo %>" style= "width:475px; height: 475px; margin-top:20px;">
-</div>
+<div class="event-show">
 
+        <img src="<%= @event.photo %>" style= "width:475px; height: 475px; margin: auto; margin-top:20px; display: inline-block; border-radius: 270px;">
 
-<div class="description">  
-	<div style="font-size: 60px; font-family: arial; font-weight: bold; color: white;">  
-    	<%= @event.name %><br>
+    <div class="description">  
+    	<div style="font-size: 60px; font-family: arial; font-weight: bold; color: white;">  
+        	<%= @event.name %><br>
+        </div>
+        <div style="text-align: center; font-family: arial; font-size: 22px; margin-bottom: 20px;">
+        <p style="color: white; font-size: 15px;"><%= @event.actualcost %></p>
+    	<%= @event.description %><br><br>
+    	<a href="<%= @event.link %>" class="linkto"><%= @event.link %></a><br><br>
+        <%= @event.address %><br>
+        <%= @event.phone %><br>
+
+        </div>
+
+        <%= link_to "More Events", events_path(@events), class: 'linktomore' %>
+
     </div>
-    <div style="text-align: center; font-family: arial; font-size: 22px; margin-bottom: 20px;">
-    <p style="color: white; font-size: 15px;"><%= @event.actualcost %></p>
-	<%= @event.description %><br><br>
-	<a href="<%= @event.link %>" class="linkto"><%= @event.link %></a><br><br>
-    <%= @event.address %><br>
-    <%= @event.phone %><br>
-
-    </div>
-
-    <%= link_to "More Events", events_path(@events), class: 'linktomore' %>
-
 </div>
 

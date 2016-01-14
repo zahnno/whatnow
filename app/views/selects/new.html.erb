@@ -15,7 +15,8 @@
 
 	<div class = "btn-group" data-toggle = "buttons-radio" style="display:none;">
 			
-			<p class="choose-size" style = "text-align:center; padding-bottom: 100px;"> Choose your size</p>
+			<p class="choose-size" style = "text-align:center; padding-bottom: 20px;"> Choose your size</p>
+			<div class="btn-container">
 			<label for="first" class="btn btn-primary"><%= f.radio_button(:group_size, "Solo", :id=>"first", :style=>"display: none;") %>SOLO</label>
  			
  			<label for="second" class="btn btn-primary">
@@ -23,13 +24,14 @@
 			
 			<label for="third" class="btn btn-primary">
 			<%= f.radio_button(:group_size, "Group", :id=>"third", :style=>"display: none;") %>GROUP</label>
+			</div>
 
 		<br>
  	</div>
     
     <div class= "interest-div">
  		
- 		<p class="choose-size" style = "text-align:center; padding-bottom: 100px;"> Choose an Interest</p>
+ 		<p class="choose-size" style = "text-align:center; padding-bottom: 20px;"> Choose an Interest</p>
 		
 		<label for="sports" class="interest-btn">
 			<%= f.radio_button(:interest, "Sports", :id=>"sports", :style=>"display: none;") %>SPORTS</label>
@@ -48,7 +50,7 @@
 
 	<div class="cost-div">
 	
-		<p class="choose-size" style = "text-align:center; padding-bottom: 100px;"> Choose a price range</p>
+		<p class="choose-size" style = "text-align:center; padding-bottom: 20px;"> Choose a price range</p>
 		<label for="free" class="cost-btn">
 			<%= f.radio_button(:cost, "Free", :id=>"free", :style=>"display: none;") %>FREE</label>
 
@@ -74,7 +76,9 @@
    			<%= f.hidden_field :longitude %>
    			Use your location
    		</label><br>
+
     	<p class='location-error'>Please enter location</p>
+    	
 
 	</div>	
 

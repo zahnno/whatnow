@@ -13,6 +13,15 @@
  *= require_tree .
  *= require_self
  */
+
+
+ .btn-container{
+	width: 100%;
+	height: auto;
+	text-align: center;
+
+ }
+
 .tpic{
 	width: 220px;
 	height: 220px;
@@ -85,10 +94,11 @@
  }
 
 .event-pic{
- 	margin-top: 10px;
- 	width:40%;
- 	display: block;
+ 	width:575px;
+ 	display: inline-block;
  	float:left;
+ 	margin: auto;
+ 	text-align: center;
 }
 
 .event-pic img{
@@ -97,6 +107,12 @@
 
 }
 
+ .event-show{
+	text-align: center;
+	width: 100%;
+	
+ }
+
 .index-details {
     text-align: center;
 	color: white;
@@ -104,10 +120,10 @@
 	margin: 0 auto;
 	padding-top: 20px;
 	padding-bottom: 20px;
-	width: 30%;
+	width: 375px;
 	height: 320px;
 	border: 1px solid black;
-	border-radius: 50%;
+	border-radius: 200px;
 	background: black;
 	margin-left: 20px;
 	margin-bottom: 30px;
@@ -156,7 +172,7 @@
 } 
 
 .allevents { 
-	margin-left: 20px;
+	text-align: center;
 	margin-top: 50px;
  }
 
@@ -191,10 +207,10 @@
 	margin: 0 auto;
 	padding-top: 20px;
 	padding-bottom: 20px;
-	width: 38%;
+	width: 470px;
 	height: 420px;
 	border: 1px solid black;
-	border-radius: 50%;
+	border-radius: 260px;
 	background: black;
 	font-size: 13px;
 }
@@ -228,6 +244,8 @@
 	border-radius: 3px;
 	padding: 20px 40px;
 	margin-left: 40px;
+	margin-top: 30px;
+	display: inline-block;
  }
  
 .interest-btn{
@@ -238,6 +256,8 @@
 	border-radius: 3px;
 	padding: 20px 40px;
 	margin-left: 40px;
+	margin-top: 30px;
+	display: inline-block;
 
 }
  .interest-div {
@@ -280,12 +300,12 @@ input:focus {
 	margin-top: 20px;
 	font-family: arial;
 	color: white;
+	margin: auto;
 	font-size: 20px;
 	border: 1px solid #262626;
 	border-radius: 3px;
 	padding: 10px 20px;
 	background: #262626;
-	margin-left: 40px;
 }
 .time-div {
 	display: none;
@@ -311,6 +331,8 @@ input:focus {
 	border-radius: 3px;
 	padding: 20px 40px;
 	margin-left: 40px;
+	margin-top: 30px;
+	display: inline-block;
 }
 
 .btn-primary:hover {
@@ -409,12 +431,15 @@ input:focus {
 }
 
 .description {
-	float: right;
 	text-align: center;
 	color: #b3b3b3;
+	margin: auto;
+	margin-left: 30px;
 	margin-top: 50px;
 	display: inline-block;
-	width: 50%;
+	width: 55%;
+	vertical-align:top
+
 }
 
 .linktomore {
