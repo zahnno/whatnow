@@ -1,21 +1,30 @@
 <div class="allevents">
-<% @events.each do |event| %>
-<div class="index-details" style= "display: inline-block">
-    <div class="border">
-    	<img src="<%= event.photo %>">
-    	<div class="eventinfo">
-        <h1 class="event-name" style="font-size: 35px;">
-  		<%= link_to event.name, event_path(event) %></h1>
-        <div style="width:60%; overflow:hidden; margin: auto;">
-        <a href="<%= event.link %>" style="color:lightblue; font-size:12px;">Website</a><br>
-        <%= event.address %><br>
-        <%= event.phone %><br>
-        <%= event.actualcost %><br>
+
+    <% @events.each do |event| %>
+
+    <div class="index-details" style= "display: inline-block">
+        <div class="border">
+
+        	<img src="<%= event.photo %>">
+
+        	<div class="eventinfo">
+
+                <h1 class="event-name" style="font-size: 35px;">
+          		<%= link_to event.name, event_path(event) %>
+                </h1>
+
+                <div style="width:60%; overflow:hidden; margin: auto;">
+                    <a href="<%= event.link %>" style="color:lightblue; font-size:12px;">Website</a><br>
+                    <%= event.address %><br>
+                    <%= event.phone %><br>
+                    <%= event.actualcost %><br>
+                </div>   
+                        
+            </div>
+                
         </div>
-       
-        </div>
-            
-     </div>
-</div>
-<% end %>
+    </div>
+
+    <% end %>
+
 </div>

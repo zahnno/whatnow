@@ -9,21 +9,21 @@
 </head>
 <body>
 	
-<h1 class="intro" style="display: none;">Welcome</h1>
+	<h1 class="intro" style="display: none;">Welcome</h1>
 
-<%= form_for @select do |f| %>
+	<%= form_for @select do |f| %>
 
 	<div class = "btn-group" data-toggle = "buttons-radio" style="display:none;">
 			
 			<p class="choose-size" style = "text-align:center; padding-bottom: 20px;"> Choose group size</p>
 			<div class="btn-container">
-			<label for="first" class="btn btn-primary"><%= f.radio_button(:group_size, "Solo", :id=>"first", :style=>"display: none;") %>SOLO</label>
- 			
- 			<label for="second" class="btn btn-primary">
- 				<%= f.radio_button(:group_size, "Double", :id=>"second", :style=>"display: none;") %>DUO</label>
-			
-			<label for="third" class="btn btn-primary">
-			<%= f.radio_button(:group_size, "Group", :id=>"third", :style=>"display: none;") %>GROUP</label>
+				<label for="first" class="btn btn-primary"><%= f.radio_button(:group_size, "Solo", :id=>"first", :style=>"display: none;") %>SOLO</label>
+	 			
+	 			<label for="second" class="btn btn-primary">
+	 				<%= f.radio_button(:group_size, "Double", :id=>"second", :style=>"display: none;") %>DUO</label>
+				
+				<label for="third" class="btn btn-primary">
+				<%= f.radio_button(:group_size, "Group", :id=>"third", :style=>"display: none;") %>GROUP</label>
 			</div>
 
 		<br>
@@ -51,9 +51,7 @@
 	<div class="cost-div">
 	
 		<p class="choose-size" style = "text-align:center; padding-bottom: 20px;"> Choose a price range</p>
-		<label for="free" class="cost-btn">
-			<%= f.radio_button(:cost, "Free", :id=>"free", :style=>"display: none;") %>FREE</label>
-
+		
 		<label for="$" class="cost-btn">
 			<%= f.radio_button(:cost, "$", :id=>"$", :style=>"display: none;") %>$</label>
 
@@ -66,19 +64,18 @@
 
 	
 	<div class="location-div">
-	<p class="choose-location">Enter your location</p>
+
+		<p class="choose-location">Enter your location</p>
     	<%= f.text_field :location, :autocomplete=>"off", :placeholder=>"Enter your location here..." %><br>
     	<label for="user" class="location-btn">
 
     	<input type="checkbox" class="u_location" id="user" style="display:none;">
-    	
  			<%= f.hidden_field :latitude %>
    			<%= f.hidden_field :longitude %>
    			Use your location
    		</label><br>
 
-    	<p class='location-error'>Please enter location</p>
-    	
+    	<p class='location-error'>Please enter location</p>   	
 
 	</div>	
 

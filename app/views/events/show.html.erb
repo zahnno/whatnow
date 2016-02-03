@@ -1,21 +1,27 @@
 <div class="event-show">
 
-        <img src="<%= @event.photo %>" style= "width:475px; height: 475px; margin: auto; margin-top:20px; display: inline-block; border-radius: 270px;">
+    <img src="<%= @event.photo %>" style= "width:475px; height: 475px; margin: auto; margin-top:20px; display: inline-block; border-radius: 270px;">
 
-    <div class="description">  
+    <div class="description"> 
+
     	<div style="font-size: 60px; font-family: arial; font-weight: bold; color: white;">  
         	<%= @event.name %><br>
         </div>
+        
         <div style="text-align: center; font-family: arial; font-size: 22px; margin-bottom: 20px;">
-        <p style="color: white; font-size: 15px;"><%= @event.actualcost %></p>
-    	Vistor Comment: <%= @event.description %><br><br>
-        <div style="border-top: 2px solid grey; width: 70%; margin: auto; padding-top: 20px">
-        For more information visit:
-    	<a href="<%= @event.link %>" class="linkto" style= "color:lightblue;">Website</a><br><br>
-        </div>
-        <div style= "color:white; font-weight:bold; width: 60%; margin: auto"><%= @event.address %></div><br>
-        Phone: <%= @event.phone %><br>
+            <p style="color: white; font-size: 15px;"><%= @event.actualcost %></p>
+        	Vistor Comment: <%= @event.description %><br><br>
 
+            <div style="border-top: 2px solid grey; width: 70%; margin: auto; padding-top: 20px">
+                For more information visit:
+            	<a href="<%= @event.link %>" class="linkto" style= "color:lightblue;">Website</a><br><br>
+            </div>
+
+            <div style= "color:white; font-weight:bold; width: 60%; margin: auto">
+                <%= @event.address %>
+            </div><br>
+            
+            Phone: <%= @event.phone %><br>
         </div>
 
         <%= link_to "More Events", events_path(@events), class: 'linktomore' %>

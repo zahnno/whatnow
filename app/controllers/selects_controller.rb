@@ -3,6 +3,7 @@ before_filter :load_events
 
 layout false, only: [:show]
 
+#Creating select filters/scopes
 def new
 	@select = Select.new
 	@group = ["Solo", "Couple", "Group"]
@@ -11,6 +12,7 @@ def new
 	Event.destroy_all
 end
 
+#Select events based on user choice, calling yelp api in Select model
 def create
 	@select = Select.new(select_params)
 	@select.reverse_geocode
@@ -30,6 +32,7 @@ def create
 	end	
 end
 
+#Location convert to display address
 def location_bar
 	result = Geocoder.search("#{params['latitude']},#{params['longitude']}")
 	address = result.first.data["formatted_address"]

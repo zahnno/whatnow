@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>angularfun</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script>
+	var app = angular.module("myApp", []);
+
+	app.controller('ctrl', function($scope){
+		$scope.firstName = 'John';
+		$scope.lastName ='Doe';
+	});
+
+	app.directive('camelCaseMadness', function() {
+		return {
+			template : 'I was made in a directive constructor'
+		};
+	});
+	</script>
+</head>
+<body>
+	<div ng-app="" ng-init="mycol='red'">
+	<p style="background:{{mycol}}">I pooped at {{1+1}}</p>
+	</div>
+
+	<div ng-app="myApp" camel-case-madness>
+		
+	</div>
+</body>
+</html>

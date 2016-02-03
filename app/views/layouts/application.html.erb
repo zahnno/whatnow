@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Whatnow</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+
+    <title>Whatnow</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+
 </head>
 <body>
-<div class = "top-banner">
-<%= link_to image_tag('whatnow.jpg', class:"logo"), root_path, method: :get %>
-<%= link_to "About", selects_path, class: "about" %>
-</div>
 
-<div class = "main-body">
-<%= yield %>
-</div>
+	<div class = "top-banner">
+		<%= link_to image_tag('whatnow.jpg', class:"logo"), root_path, method: :get %>
+		<%= link_to "About", selects_path, class: "about" %>
+	</div>
+
+	<div class = "main-body">
+		<%= yield %>
+	</div>
+
 </body>
 </html>
  
