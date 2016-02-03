@@ -3,6 +3,7 @@ before_filter :load_select
 
 def index
 	@events = @select.last.allevents
+
 end
 
 def show

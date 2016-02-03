@@ -8,10 +8,13 @@
         </div>
         <div style="text-align: center; font-family: arial; font-size: 22px; margin-bottom: 20px;">
         <p style="color: white; font-size: 15px;"><%= @event.actualcost %></p>
-    	<%= @event.description %><br><br>
-    	<a href="<%= @event.link %>" class="linkto"><%= @event.link %></a><br><br>
-        <%= @event.address %><br>
-        <%= @event.phone %><br>
+    	Vistor Comment: <%= @event.description %><br><br>
+        <div style="border-top: 2px solid grey; width: 70%; margin: auto; padding-top: 20px">
+        For more information visit:
+    	<a href="<%= @event.link %>" class="linkto" style= "color:lightblue;">Website</a><br><br>
+        </div>
+        <div style= "color:white; font-weight:bold; width: 60%; margin: auto"><%= @event.address %></div><br>
+        Phone: <%= @event.phone %><br>
 
         </div>
 

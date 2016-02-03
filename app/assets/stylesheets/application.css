@@ -13,8 +13,6 @@
  *= require_tree .
  *= require_self
  */
-
-
  .btn-container{
 	width: 100%;
 	height: auto;
@@ -127,6 +125,8 @@
 	background: black;
 	margin-left: 20px;
 	margin-bottom: 30px;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 .index-details img{
 	 border-radius: 50%;
@@ -165,6 +165,7 @@
 .tagging{
  	text-decoration: none;
  	color: white;
+ 	overflow: hidden;
 }
 
 .tagging:hover {
@@ -355,7 +356,7 @@ input:focus {
 
 .intro{
 	margin-top: 0px;
-	height: 400px;
+	height: auto;
 	padding-top: 200px;
 	text-align: center;
 	font-size: 100px;
@@ -412,13 +413,22 @@ input:focus {
 }
 
 .event-name{
+	margin: auto;
+	margin-top: 15px;
 	font-style: italic;
 	color: white;
 	margin-bottom: 15px;
+	line-height: 80%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	width: 90%;
+
 }
 
 .border{
 	color:grey;
+	width: 80%;
+	margin: auto;
 }
 
 .destination {

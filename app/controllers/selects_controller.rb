@@ -8,6 +8,7 @@ def new
 	@group = ["Solo", "Couple", "Group"]
 	@select_interest = ["Theatre", "Film", "Art", "Dining", "Volunteer", "Adventure", "Sports"]
 	@cost = ["Free", "$", "$$", "$$$"]
+	Event.destroy_all
 end
 
 def create

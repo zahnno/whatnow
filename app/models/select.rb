@@ -10,11 +10,23 @@ class Select < ActiveRecord::Base
 
 
 	def allevents
-		Event.near(location).category(interest).grpsize(group_size).cost(cost)
+		Event.near(location).category(interest)
+		# .grpsize(group_size).cost(cost)
 	end
 
 	def retrieve
-		Event.near(location).category(interest).grpsize(group_size).cost(cost).sample
+		terms = interest + " events " + "to do"
+		params = { limit: 10, term: terms}
+		locale = { lang: 'en'}
+		@event2 = Yelp.client.search(location, params, locale)
+		even = []
+		@event2.businesses.each do |event|
+			
+			even << Event.create(name: event.name, category: interest, address: event.location.display_address.join(' '), phone: event.phone, link: event.url, photo: event.image_url, description: event.snippet_text, is_close: event.is_closed)
+
+		end	
+
+		Event.near(location).category(interest).is_close('f').sample
 	end
 
 	# def get_meetup_events

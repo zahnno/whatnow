@@ -36,12 +36,8 @@ cn = Event.create(name: "CN Tower", category: "Art", grpsize: "Couple", address:
 escape = Event.create(name: "Escape Zone", category: "Art", grpsize: "Group", address: "388 Spadina Avenue 2nd Floor Toronto, ON M5T 2G5 Canada", phone: "(647) 350-0140", cost: "$$", link: "http://www.escapezonetoronto.com/", photo: "http://www.yelp.com/biz_photos/escapezone-toronto?select=-3A_6OHnwhOsR9rLQ8Xlbg", description:"EscapeZone is a Real Life Escape Game provider in Toronto, offering themed escape rooms to players who thrive on brain twisting challenges in an actual physical environment. Real Life Escape Game is the latest global phenomenon which has taken the gaming world by storm, with more and more players experiencing the simple thrills of escaping from cleverly designed escape rooms.")
 
 # sports Free
-hoopdome = Event.create(name: "Hoopdome", category: "Sports", grpsize: "Solo", address: "75 Carl Hall Rd #17, North York, ON M3K 2B9", phone: "(416) 633-4667", cost: "free", link: "http://www.hoopdome.com", photo: "http://www.avconconstruction.com/commercialgallery/g9/images/07-105%20Hoopdome%20007.jpg")
 sleep(1)
 hoopdome = Event.create(name: "Hoopdome", category: "Sports", grpsize: "Duo", address: "75 Carl Hall Rd #17, North York, ON M3K 2B9", phone: "(416) 633-4667", cost: "free", link: "http://www.hoopdome.com", photo: "http://www.avconconstruction.com/commercialgallery/g9/images/07-105%20Hoopdome%20007.jpg")
-
-hoopdome = Event.create(name: "Hoopdome", category: "Sports", grpsize: "Group", address: "75 Carl Hall Rd #17, North York, ON M3K 2B9", phone: "(416) 633-4667", cost: "free", link: "http://www.hoopdome.com", photo: "http://www.avconconstruction.com/commercialgallery/g9/images/07-105%20Hoopdome%20007.jpg")
-skating = Event.create(name: "Natrel Rink", category: "Sports", grpsize: "Duo", address: "235 Queens Quay W, Toronto, ON M5J 2G8", phone: "(416) 973-4000", cost: "free", link: "http://www.harbourfrontcentre.com/venues/natrelrink/", photo: "http://blog.navut.com/wp-content/uploads/2015/02/20101124-GM-Feature0002.jpg")
 
 skating = Event.create(name: "Natrel Rink", category: "Sports", grpsize: "Group", address: "235 Queens Quay W, Toronto, ON M5J 2G8", phone: "(416) 973-4000", cost: "free", link: "http://www.harbourfrontcentre.com/venues/natrelrink/", photo: "http://blog.navut.com/wp-content/uploads/2015/02/20101124-GM-Feature0002.jpg")
 # sports $
@@ -49,17 +45,12 @@ archery_tag = Event.create(name: "Archery Tag District", category: "Sports", grp
 ")
 sleep(1)
 # sport $$
-ifly = Event.create(name: "iFly Toronto", category: "Sports", grpsize: "Group", address: "2007 Winston Park Dr, Oakville, ON", phone: "(289)-795-4000", cost: "$$", link: "http://www.iflytoronto.com", photo: "http://urbanmoms.ca/wp-content/uploads/2014/12/ifly-toronto.jpg", description: "Indoor free-fall skydiving is for everyone. No prior experience is necessary. So, whether you are an experienced skydiver or have never tried a sport like this before, this discipline is available to you. The sport is also accessible to people with disabilities.")
 # film $$
 # film $$$
 george = Event.create(name: "George", category: "Food", grpsize: "Couple", address: "111 Queen St E Toronto, ON M5C 1S2 Canada", phone: "(416) 863-6006", cost: "$$$", link: "www.georgeonqueen.com", photo: "http://www.yelp.com/biz_photos/george-toronto?select=13Wto1ZVisvZvnENTAgeQA", description:"Many rave that GEORGE is the best restaurant in Toronto. Under the culinary leadership of renowned Executive Chef Lorenzo Loseto, GEORGE has become a top-rated and best restaurant for the city of Toronto’s fine dining. Recently named the 2014 Canadian Culinary Champion, Chef Loseto is widely regarded as the best restaurant Chef in the country today.")
-ifly = Event.create(name: "iFly Toronto", category: "Sports", grpsize: "Group", address: "2007 Winston Park Dr, Oakville, ON", phone: "(289)-795-4000", cost: "$$", link: "http://www.iflytoronto.com", photo: "http://urbanmoms.ca/wp-content/uploads/2014/12/ifly-toronto.jpg")
-
 ifly = Event.create(name: "iFly Toronto", category: "Sports", grpsize: "Duo", address: "2007 Winston Park Dr, Oakville, ON", phone: "(289)-795-4000", cost: "$$", link: "http://www.iflytoronto.com", photo: "http://urbanmoms.ca/wp-content/uploads/2014/12/ifly-toronto.jpg")
 # film $$
-absolute_comedy = Event.create(name: "Absolute Comedy Club", category: "Film", grpsize: "Duo", address: "2335 Yonge St, Toronto, ON M4P 2C8", phone: "(416) 486-7700", cost: "$$", link: "http://toronto.absolutecomedy.ca/", photo: "https://i.ytimg.com/vi/EvJWvrTyxNw/maxresdefault.jpg")
 absolute_comedy = Event.create(name: "Absolute Comedy Club", category: "Film", grpsize: "Group", address: "2335 Yonge St, Toronto, ON M4P 2C8", phone: "(416) 486-7700", cost: "$$", link: "http://toronto.absolutecomedy.ca/", photo: "https://i.ytimg.com/vi/EvJWvrTyxNw/maxresdefault.jpg")
-karaoke = Event.create(name: "Bar+ Karaoke", category: "Film", grpsize: "Group", address: "360 Yonge St #2, Toronto, ON M5B 1S5", phone: "(416) 340-7154", cost: "$$", link: "https://bar-plus.com/#/0", photo: "http://s3-media4.fl.yelpcdn.com/bphoto/9O806MU2-w6-eyRIHVDVmQ/o.jpg")
 karaoke = Event.create(name: "Bar+ Karaoke", category: "Film", grpsize: "Duo", address: "360 Yonge St #2, Toronto, ON M5B 1S5", phone: "(416) 340-7154", cost: "$$", link: "https://bar-plus.com/#/0", photo: "http://s3-media4.fl.yelpcdn.com/bphoto/9O806MU2-w6-eyRIHVDVmQ/o.jpg")
 #film $$$
 sleep(1)
@@ -70,7 +61,6 @@ fat_bastard_burrito = Event.create(name: "Fat Bastard Burrito", category: "Food"
 sleep(1)
 the_burger_priest = Event.create(name: "The Burger Priest", category: "Food", grpsize: "Group", address: "212 Adelaide St. W., Toronto, ON, Canada M5H 1W7", phone:"(647) 347-7757", cost: "$", link:"http://www.theburgerspriest.com/", photo:"http://theburgersprie.wpengine.com/wp-content/uploads/2014/04/logo2.png", description: "We are a classic cheeseburger joint. We grind a custom blend of ultra premium beef multiple times daily on the premises. Our beef is always fresh. We cook our cheeseburgers on a flat top griddle not on a charcoal broiler. We believe in purity, simplicity and over a hundred years of grilling and grinding techniques.")
 McDonald = Event.create(name: "Mc Donalds", category: "Food", grpsize: "Group", address: "123 YONGE ST, TORONTO ON M5C 1W4", phone:"(416) 862-8899,", cost: "$", link: "http://www.mcdonalds.ca/ca/en.html", photo:"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Mcdonalds-90s-logo.svg/2000px-Mcdonalds-90s-logo.svg.png", description: "At McDonald’s, we’re proud of the way we’re creating an experience to remember: reaching customers wherever they are and innovating new tastes and choices. Modern service. Personal engagement. Great-tasting burgers and fries.")
-snakes_and_lattes = Event.create(name: "Snakes & Lattes", category: "Food", grpsize: "Duo", address: "600 Bloor St W, Toronto, ON", phone: "(647) 342-9229", cost: "$", link: "http://www.snakesandlattes.com", photo:"http://www.snakesandlattes.com/img/ico/600.png", description: "For $5/person, you can sit and play any of the games that they have for an unlimited amount of time. This is such an awesome deal for a family outing, a cute date, a get together with friends, pretty much any and every occasion.")
 snakes_and_lattes = Event.create(name: "Snakes & Lattes", category: "Food", grpsize: "Group", address: "600 Bloor St W, Toronto, ON", phone: "(647) 342-9229", cost: "$", link: "http://www.snakesandlattes.com", photo:"http://www.snakesandlattes.com/img/ico/600.png", description: "For $5/person, you can sit and play any of the games that they have for an unlimited amount of time. This is such an awesome deal for a family outing, a cute date, a get together with friends, pretty much any and every occasion.")
 # food $
 sleep(1)
@@ -88,6 +78,3 @@ Keg= Event.create(name: "keg Steak House", category: "Food", grpsize: "Group", a
 #art $
 sleep(1)
 ago = Event.create(name: "Art Gallery of Ontario", category: "Art", grpsize: "Duo", address: "317 Dundas St W, Toronto, ON M5T 1G4", phone: "(416) 979-6648", cost: "$$", link: "http://www.ago.net/?_sp=d67fcbe27e3e3175.1452570231972", photo: "http://fashweekly.com/wp-content/uploads/2013/05/ago.jpg")
-ago = Event.create(name: "Art Gallery of Ontario", category: "Art", grpsize: "Solo", address: "317 Dundas St W, Toronto, ON M5T 1G4", phone: "(416) 979-6648", cost: "$$", link: "http://www.ago.net/?_sp=d67fcbe27e3e3175.1452570231972", photo: "http://fashweekly.com/wp-content/uploads/2013/05/ago.jpg")
-ago = Event.create(name: "Art Gallery of Ontario", category: "Art", grpsize: "Group", address: "317 Dundas St W, Toronto, ON M5T 1G4", phone: "(416) 979-6648", cost: "$$", link: "http://www.ago.net/?_sp=d67fcbe27e3e3175.1452570231972", photo: "http://fashweekly.com/wp-content/uploads/2013/05/ago.jpg")
-
