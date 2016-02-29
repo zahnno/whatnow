@@ -497,3 +497,7 @@ a{
 	-o-transition: color .4s linear; 
 	transition: color .4s linear;
 }
+
+@media only screen and (max-device-width: 860px) {
+
+}
