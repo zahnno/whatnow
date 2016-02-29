@@ -1,5 +1,9 @@
 Whatnow is a web application that provides users an upcoming event taking place on the same day based on their preferences.
 
+Ruby On rails set up req ***
+
+Config on Postgres
+
 In Terminal 
 
 - Git clone SSH Key
