@@ -33,18 +33,19 @@
  		
  		<p class="choose-size" style = "text-align:center; padding-bottom: 20px;"> Choose an Interest</p>
 		
-		<label for="sports" class="interest-btn">
-			<%= f.radio_button(:interest, "Sports", :id=>"sports", :style=>"display: none;") %>SPORTS</label>
+		<div class="btn-container">
+			<label for="sports" class="interest-btn">
+				<%= f.radio_button(:interest, "Sports", :id=>"sports", :style=>"display: none;") %>SPORTS</label>
 
-		<label for="art" class="interest-btn">
-			<%= f.radio_button(:interest, "Art", :id=>"art", :style=>"display: none;") %>ART</label>
+			<label for="art" class="interest-btn">
+				<%= f.radio_button(:interest, "Art", :id=>"art", :style=>"display: none;") %>ART</label>
 
-		<label for="film" class="interest-btn">
-			<%= f.radio_button(:interest, "Film", :id=>"film", :style=>"display: none;") %>FILM</label>
+			<label for="film" class="interest-btn">
+				<%= f.radio_button(:interest, "Film", :id=>"film", :style=>"display: none;") %>FILM</label>
 
-		<label for="food" class="interest-btn">
-			<%= f.radio_button(:interest, "Food", :id=>"food", :style=>"display: none;") %>FOOD</label>
-
+			<label for="food" class="interest-btn">
+				<%= f.radio_button(:interest, "Food", :id=>"food", :style=>"display: none;") %>FOOD</label>
+		</div>
 	</div>
 
 
@@ -52,14 +53,16 @@
 	
 		<p class="choose-size" style = "text-align:center; padding-bottom: 20px;"> Choose a price range</p>
 		
-		<label for="$" class="cost-btn">
-			<%= f.radio_button(:cost, "$", :id=>"$", :style=>"display: none;") %>$</label>
+		<div class="btn-container">
+			<label for="$" class="cost-btn">
+				<%= f.radio_button(:cost, "$", :id=>"$", :style=>"display: none;") %>$</label>
 
-		<label for="$$" class="cost-btn">
-			<%= f.radio_button(:cost, "$$", :id=>"$$", :style=>"display: none;") %>$$</label>
+			<label for="$$" class="cost-btn">
+				<%= f.radio_button(:cost, "$$", :id=>"$$", :style=>"display: none;") %>$$</label>
 
-		<label for="$$$" class="cost-btn">
-			<%= f.radio_button(:cost, "$$$", :id=>"$$$", :style=>"display: none;") %>$$$</label>
+			<label for="$$$" class="cost-btn">
+				<%= f.radio_button(:cost, "$$$", :id=>"$$$", :style=>"display: none;") %>$$$</label>
+		</div>
 	</div>
 
 	
