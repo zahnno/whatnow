@@ -551,4 +551,12 @@ a{
     	width: 270px;
     	font-size: 30px;
 	}
+
+	.event-details{
+		margin-top: 45%;
+	}
+
+	.event-show{
+		margin-top: 20%;
+	}
 }
