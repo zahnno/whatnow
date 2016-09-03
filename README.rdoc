@@ -6,10 +6,9 @@ Config on Postgres
 
 In Terminal 
 
+- bundle install
 - Git clone SSH Key
 - Rails s
 - Open in webrowser localhost:3000
-
-bundle install just to be safe
 
 Please message if you'd like to contribute.
